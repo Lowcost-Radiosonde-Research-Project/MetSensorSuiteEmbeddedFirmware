@@ -1,0 +1,178 @@
+# =============================================================================
+# Lowcost Radiosonde Research Project — .gitignore
+# Covers: Pico SDK (C/CMake), MicroPython, KiCad, VSCode, Python tooling
+# =============================================================================
+
+
+# =============================================================================
+# CMake / Pico SDK Build Artifacts
+# =============================================================================
+build/
+build-*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+*.make
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Pico SDK generated outputs
+*.uf2
+*.elf
+*.bin
+*.hex
+*.map
+*.dis
+*.lst
+
+
+# =============================================================================
+# MicroPython
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# MicroPython compiled bytecode
+*.mpy
+
+
+# =============================================================================
+# Python Tooling (ground station, scripts)
+# =============================================================================
+# Note: MicroPython firmware (micropython/) runs on the Pico directly and
+# does not use a venv. The ground_station/ tools run on the host and DO
+# use a venv — keep requirements.txt committed, not the venv itself.
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# pytest
+.pytest_cache/
+.cache/
+*.pytest_cache
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+
+# =============================================================================
+# KiCad
+# =============================================================================
+
+# Autosave and backup files
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.bak
+*.bak[0-9]*
+*-backups/
+_autosave-*
+
+# KiCad project local settings (machine specific)
+*.kicad_prl
+
+# Gerber / fabrication outputs (generate from source, don't commit)
+gerbers/
+fabrication/
+*.gbr
+*.gbl
+*.gtl
+*.gbs
+*.gts
+*.gbo
+*.gto
+*.gm1
+*.drl
+*.drl.report
+*.pos
+*.cpl
+*.csv
+
+# KiCad 3D cache
+fp-info-cache
+*.3dshapes/
+
+
+# =============================================================================
+# VSCode
+# =============================================================================
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# VSCode Pico extension generated files
+.pico-sdk/
+
+
+# =============================================================================
+# Operating System
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+
+# =============================================================================
+# Misc
+# =============================================================================
+
+# Secrets / credentials — never commit these
+*.env
+.env.*
+secrets.h
+secrets.py
+
+# Log files
+*.log
+
+# Editor swap files
+*.swp
+*.swo
+*.swn
+*.orig
+
+# Emacs
+\#*\#
+.\#*
