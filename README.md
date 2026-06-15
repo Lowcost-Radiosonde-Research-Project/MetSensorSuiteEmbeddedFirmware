@@ -7,21 +7,21 @@
 
 # Met Pico Sensor Suite - Firmware Skeleton
 
-Status as of latest revision. Two modules are real, working drivers;
-three are stubs with the final interface in place so `main.py` and the
-SD log format are complete end-to-end right now.
+Status as of latest revision. Every module now has a real
+implementation - BMI330's carries a significant caveat (see below and
+its module docstring) since its register map is unverified.
 
 ## File layout
 
 | File              | Status | Notes |
 |-------------------|--------|-------|
 | `config.py`       | Real   | All pins/addresses/constants in one place. Several `TODO`s remain. |
-| `packet.py`       | Real   | Fixed-width binary record format (`PACKET_FORMAT = "<I15fB"`, 65 bytes). |
+| `packet.py`       | Real   | Fixed-width binary record format (`PACKET_FORMAT = "<I15fBBBB"`, 68 bytes). |
 | `bme280.py`       | Real   | Full Bosch compensation formulas, forced-mode reads. I2C bus 1. |
 | `rtd_ads1115.py`  | Real   | Ratiometric RTD read + Callendar-Van Dusen (T >= 0 C only). I2C bus 1. |
-| `ms5611.py`       | Stub   | Returns NAN for temp/pressure. I2C bus 2. Same `init_x()`/`read()` interface. |
-| `bmi330.py`       | Stub   | Returns NAN for all 6 axes (mg / mdps). I2C bus 2. Same interface. |
-| `gps_neo_m9n.py`  | Stub   | Returns NAN/NO_DATA_U8. Same interface. |
+| `ms5611.py`       | Real   | PROM calibration + 1st/2nd-order temp/pressure compensation. I2C bus 2. |
+| `bmi330.py`       | **Unverified** | Register map guessed from the related BMI323; may not function as intended - see caveat below. I2C bus 2. |
+| `gps_neo_m9n.py`  | Real   | NMEA GGA parsing: lat/lon/alt/num_sats/UTC time. |
 | `sd_logger.py`    | Real   | Mounts SD, appends `packet.pack_record()` output, periodic flush. |
 | `imet_packet.py`  | Real   | Builds the 38-byte iMet-1-RSB GPS+PTU-enhanced downlink frame + CRC-16. |
 | `link_uart.py`    | Real   | Frames and sends one 38-byte iMet frame per cycle to the RF Pico over UART. |
@@ -47,6 +47,24 @@ and a `[WARN]` line to the console.
 All pin numbers above are placeholders pending the Tuesday wiring
 session - see the `TODO`s in `config.py`.
 
+## BMI330 caveat - documentation lacking, driver may not work as intended
+
+`bmi330.py` is written against the BMI323's register map (a related
+Bosch part) because verified BMI330-specific register documentation
+wasn't available when this was written. The register addresses,
+ACC_CONF/GYR_CONF bitfield values, and full-scale range assumptions are
+all unverified guesses. **The driver may run without raising any error
+and still return meaningless numbers.**
+
+On Tuesday, `init_bmi330()` will print whatever it reads from the
+assumed CHIP_ID register (0x00) as a diagnostic - note that value down.
+If accel/gyro readings look like noise, sit constant, or are far
+outside physical range (accelerometer magnitude should be close to 1g
+at rest), the register map guess is wrong and `bmi330.py` needs
+revisiting against real BMI330 documentation (Bosch's BMI3 Sensor API
+repo is the best starting point once it covers BMI330). This isn't
+blocking for Wednesday - BMI330 isn't part of that test.
+
 ## Field naming convention
 
 `packet.FIELD_NAMES` prefixes every field with the sensor that owns it
@@ -55,11 +73,14 @@ are in milli-g / milli-deg/s (`_mg` / `_mdps`) rather than g / deg-per-s
 - worth keeping in mind when the real BMI330 driver is written, since
 the conversion from raw counts will need to land in those units.
 
-The GPS record currently has `gps_num_sats` but no fix-type field -
-`gps.read()` returns a 4-tuple `(lat, lon, alt, num_sats)`. If you want
-fix-quality (e.g. for SondeHub-style reporting) added back, that's a
-small change to `packet.py` (one more `B` field) and `gps_neo_m9n.py`
-(return a 5-tuple again) - flag it whenever GPS moves off the stub.
+The GPS record has `gps_num_sats` plus `gps_hour`/`gps_minute`/
+`gps_second` (UTC time of fix), but no fix-type field - `gps.read()`
+returns a 7-tuple `(lat, lon, alt, num_sats, hour, minute, second)`.
+Position/altitude are NAN and the satellite/time fields are
+`NO_DATA_U8` until a checksum-valid GGA sentence with a non-zero fix
+quality has been parsed. If you want fix-quality (e.g. for
+SondeHub-style reporting) added too, that's a small change to
+`packet.py` (one more `B` field) and `gps_neo_m9n.py`'s `_parse_gga()`.
 
 ## iMet-1-RSB downlink frame
 
@@ -78,9 +99,8 @@ change - it's just which `record[...]` value is passed to which
 
 | iMet field | Source | Notes |
 |---|---|---|
-| GPS lat/lon/alt/num_sats | `gps_*` record fields | stub -> NAN/NO_DATA for now |
-| GPS hour/min/sec | hardcoded `0xFF` | **TODO**: needs NMEA UTC time from a real GPS driver |
-| P (pressure) | `ms5611_pressure_hpa` | **TODO**: confirm vs. BME280; NAN until MS5611 implemented |
+| GPS lat/lon/alt/num_sats/hour/min/sec | `gps_*` record fields | real NMEA GGA parsing; NAN/NO_DATA until a fix is acquired |
+| P (pressure) | `ms5611_pressure_hpa` | **TODO**: confirm vs. BME280 as the primary pressure source |
 | T (primary temp) | `bme280_temp_c` | |
 | U (humidity) | `bme280_humidity_pct` | |
 | Vbat | hardcoded NAN | **TODO**: no battery-voltage sensing exists yet (new ADC channel) |
@@ -110,9 +130,14 @@ is well-formed even with everything still stubbed.
 - [ ] Confirm `RTD_MUX` / `REF_MUX` (which ADS1115 differential pair is
       the RTD vs. the reference resistor) and `ADS1115_GAIN` (PGA
       setting), based on the RTD interface board.
-- [ ] Confirm `MS5611_I2C_ADDR` and `BMI330_I2C_ADDR` if those boards
-      are in hand (their drivers are still stubs either way, so this
-      isn't blocking for Wednesday).
+- [ ] Confirm `MS5611_I2C_ADDR` and `BMI330_I2C_ADDR` once those boards
+      are wired. MS5611 and GPS now have real drivers, so a wrong
+      address will surface as `[WARN] ... init failed` from
+      `_safe_init` rather than silently logging NaN.
+- [ ] For BMI330: note the `[INFO] BMI330 CHIP_ID register read as
+      0x..` line at startup and sanity-check accel/gyro readings
+      against the caveat above - this driver's register map is a
+      guess.
 - [ ] Run `main.py`. With only BME280 + RTD wired, expect `[WARN]`
       lines at startup for MS5611/BMI330/GPS init or SD mount (if not
       present) - that's expected, the loop should keep running and
@@ -128,7 +153,7 @@ t=   12345ms  T= 23.45C  P=1006.32hPa  RH= 45.2%  RTD= 23.10C
 
 gives a live sanity check that BME280 and RTD agree roughly with each
 other and with ambient conditions. The SD card (if mounted) accumulates
-`PACKET_SIZE`-byte (65-byte) binary records in `/sd/metlog.bin` - decode
+`PACKET_SIZE`-byte (68-byte) binary records in `/sd/metlog.bin` - decode
 with `packet.unpack_record()` in a small post-processing script, reading
 `PACKET_SIZE` bytes at a time.
 
@@ -137,8 +162,8 @@ with `packet.unpack_record()` in a small post-processing script, reading
 - RTD conversion only handles T >= 0 C (Callendar-Van Dusen quadratic
   inversion). The sub-zero cubic-term inversion needs to be added before
   the actual flight.
-- MS5611, BMI330, and GPS drivers are stubs - see the `TODO` blocks at
-  the top of each file for what a real implementation needs to do.
+- BMI330 is unverified - see the dedicated caveat section above and
+  `bmi330.py`'s module docstring before trusting any IMU data.
 - `link_uart.py` now sends a 38-byte iMet frame instead of the
   65-byte `packet.py` record - see "iMet-1-RSB downlink frame" above
   for the sensor mapping and its open TODOs (Vbat sensing, GPS UTC

@@ -15,6 +15,7 @@ take down the whole log.
 
 Author: Nathaniel Peyer
 Date: 06-14-2026
+Last edited: 06-15-2026 
 """
 
 import time
@@ -153,7 +154,10 @@ def main():
                 (record["gps_lat_deg"],
                  record["gps_lon_deg"],
                  record["gps_alt_m"],
-                 record["gps_num_sats"]) = gps.read()
+                 record["gps_num_sats"],
+                 record["gps_hour"],
+                 record["gps_minute"],
+                 record["gps_second"]) = gps.read()
             except OSError as e:
                 print("[WARN] GPS/NEO-M9N read failed: {}".format(e))
 
@@ -170,13 +174,12 @@ def main():
         # definitions; this mapping is just keyword arguments below,
         # so it's a one-line change if you want a different sensor in
         # a given slot):
-        #   GPS lat/lon/alt/num_sats -> straight from the GPS record
-        #   GPS hour/min/sec         -> not yet available (gps_neo_m9n
-        #                               stub doesn't parse NMEA time);
-        #                               0xFF = no data
+        #   GPS lat/lon/alt/num_sats/hour/min/sec -> straight from the
+        #                               GPS record fields
         #   P    (pressure)          -> ms5611_pressure_hpa (TODO:
         #                               confirm - currently NAN since
-        #                               MS5611 is a stub)
+        #                               MS5611 read may still fail on
+        #                               first hardware bring-up)
         #   T    (primary temp)      -> bme280_temp_c
         #   U    (humidity)          -> bme280_humidity_pct
         #   Vbat (battery voltage)   -> not yet measured; NAN = no data
@@ -190,9 +193,9 @@ def main():
                 "lon_deg": record["gps_lon_deg"],
                 "alt_m": record["gps_alt_m"],
                 "num_sats": record["gps_num_sats"],
-                "hour": 0xFF,
-                "minute": 0xFF,
-                "second": 0xFF,
+                "hour": record["gps_hour"],
+                "minute": record["gps_minute"],
+                "second": record["gps_second"],
             },
             {
                 "pkt_num": imet_pkt_num,
