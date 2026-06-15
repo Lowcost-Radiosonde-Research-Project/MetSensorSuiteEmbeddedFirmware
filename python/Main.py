@@ -2,8 +2,10 @@
 
 Initializes the full sensor suite, then runs a fixed-interval loop that
 reads every sensor, assembles one packet.FIELD_NAMES record, appends it
-to the SD card log, and forwards it to the RF Pico over the link UART.
-Also prints a one-line summary to the console for live monitoring.
+to the SD card log, and builds a 38-byte iMet-1-RSB frame (GPS Data
+Packet + PTU-enhanced Data Packet, see imet_packet.py) which is sent to
+the RF Pico over the link UART for AFSK transmission. Also prints a
+one-line summary to the console for live monitoring.
 
 Sensors that fail to initialize or raise an error during read() report
 NAN (or NO_DATA_U8 for the GPS satellite count) for their portion of
@@ -21,6 +23,7 @@ from machine import I2C, Pin, UART
 
 import config
 import packet
+import imet_packet
 import link_uart
 from bme280 import init_bme280
 from ms5611 import init_ms5611
@@ -98,6 +101,10 @@ def main():
 
     next_sample_ms = time.ticks_ms()
 
+    # Sequence number for the iMet PTU-enhanced packet's PKT field.
+    # Wraps at 65536 (imet_packet.pack_ptu_enhanced_packet masks it too).
+    imet_pkt_num = 0
+
     while True:
         now_ms = time.ticks_ms()
         if time.ticks_diff(now_ms, next_sample_ms) < 0:
@@ -158,9 +165,50 @@ def main():
             except OSError as e:
                 print("[WARN] SD card log append failed: {}".format(e))
 
+        # --- iMet-1-RSB downlink frame ---
+        # Sensor -> iMet field mapping (see imet_packet.py for field
+        # definitions; this mapping is just keyword arguments below,
+        # so it's a one-line change if you want a different sensor in
+        # a given slot):
+        #   GPS lat/lon/alt/num_sats -> straight from the GPS record
+        #   GPS hour/min/sec         -> not yet available (gps_neo_m9n
+        #                               stub doesn't parse NMEA time);
+        #                               0xFF = no data
+        #   P    (pressure)          -> ms5611_pressure_hpa (TODO:
+        #                               confirm - currently NAN since
+        #                               MS5611 is a stub)
+        #   T    (primary temp)      -> bme280_temp_c
+        #   U    (humidity)          -> bme280_humidity_pct
+        #   Vbat (battery voltage)   -> not yet measured; NAN = no data
+        #   Tint (internal temp)     -> bme280_temp_c (TODO: confirm -
+        #                               currently duplicates T)
+        #   Tpr  (probe temp)        -> rtd_temp_c
+        #   Tu   (aux temp)          -> not yet mapped; NAN = no data
+        imet_frame = imet_packet.pack_frame(
+            {
+                "lat_deg": record["gps_lat_deg"],
+                "lon_deg": record["gps_lon_deg"],
+                "alt_m": record["gps_alt_m"],
+                "num_sats": record["gps_num_sats"],
+                "hour": 0xFF,
+                "minute": 0xFF,
+                "second": 0xFF,
+            },
+            {
+                "pkt_num": imet_pkt_num,
+                "pressure_hpa": record["ms5611_pressure_hpa"],
+                "temp_c": record["bme280_temp_c"],
+                "humidity_pct": record["bme280_humidity_pct"],
+                "vbat_v": packet.NAN,
+                "temp_int_c": record["bme280_temp_c"],
+                "temp_probe_c": record["rtd_temp_c"],
+                "temp_u_c": packet.NAN,
+            })
+        imet_pkt_num = (imet_pkt_num + 1) & 0xFFFF
+
         if link_port is not None:
             try:
-                link_uart.send_record(link_port, record_bytes)
+                link_uart.send_record(link_port, imet_frame)
             except OSError as e:
                 print("[WARN] Link UART send failed: {}".format(e))
 

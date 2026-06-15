@@ -5,8 +5,8 @@ calibration constants so that hardware changes only require edits in
 this file. Values marked TODO are placeholders pending hardware
 confirmation and must be updated before flight.
 
-Author: Nathaniel Peyer
-Date: 06-14-2026
+Authors: Nathaniel Peyer
+Date: 06-15-2026
 """
 
 # I2C bus 1: ADS1115 (RTD interface) and BME280.
@@ -72,8 +72,9 @@ GPS_UART_TX_PIN = 4
 GPS_UART_RX_PIN = 5
 GPS_UART_BAUD_RATE = 9600
 
-# UART link to the RF Pico - one packet.pack_record() payload, framed
-# by link_uart.send_record(), is sent each sample cycle.
+# UART link to the RF Pico - one 38-byte iMet-1-RSB frame (see
+# imet_packet.py), framed by link_uart.send_record(), is sent each
+# sample cycle for the RF Pico to AFSK-modulate.
 # TODO: confirm pins and baud rate once the inter-Pico wiring is set.
 LINK_UART_ID = 0
 LINK_UART_TX_PIN = 12
