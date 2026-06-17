@@ -20,7 +20,7 @@ Last edited: 06-15-2026
 
 import time
 
-from machine import I2C, Pin, UART
+from machine import I2C, Pin, UART, SoftI2C
 
 import config
 import packet
@@ -63,10 +63,9 @@ def main():
     regulator_en.value(1)
     time.sleep_ms(config.REGULATOR_ENABLE_DELAY_MS)
 
-    i2c1 = I2C(config.I2C1,
-               scl=Pin(config.I2C1_SCL_PIN),
-               sda=Pin(config.I2C1_SDA_PIN),
-               freq=config.I2C1_FREQ_HZ)
+    i2c1 = SoftI2C(scl=Pin(config.I2C1_SCL_PIN),
+                sda=Pin(config.I2C1_SDA_PIN))
+    
     i2c2 = I2C(config.I2C2,
                scl=Pin(config.I2C2_SCL_PIN),
                sda=Pin(config.I2C2_SDA_PIN),

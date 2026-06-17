@@ -18,6 +18,9 @@ Example usage on ESP8266:
     os.mount(sd, '/sd')
     os.listdir('/')
 
+Authors: Damien P. George, modified by Nathaniel Peyer
+Date: 06-15-2026
+
 """
 
 from micropython import const
