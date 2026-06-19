@@ -215,10 +215,16 @@ def main():
                 print("[WARN] Link UART send failed: {}".format(e))
 
         print("t={:>8d}ms  T={:6.2f}C  P={:7.2f}hPa  RH={:5.1f}%  "
-              "RTD={:6.2f}C".format(
+              "RTD={:6.2f}C  MS_T={:6.2f}C  MS_P={:7.2f}hPa  "
+              "AX={:7.1f}mg  AY={:7.1f}mg  AZ={:7.1f}mg  "
+              "GX={:8.1f}mdps  GY={:8.1f}mdps  GZ={:8.1f}mdps".format(
                   record["timestamp_ms"], record["bme280_temp_c"],
                   record["bme280_pressure_hpa"],
-                  record["bme280_humidity_pct"], record["rtd_temp_c"]))
+                  record["bme280_humidity_pct"], record["rtd_temp_c"],
+                  record["ms5611_temp_c"], record["ms5611_pressure_hpa"],
+                  record["bmi330_accel_x_mg"], record["bmi330_accel_y_mg"],
+                  record["bmi330_accel_z_mg"], record["bmi330_gyro_x_mdps"],
+                  record["bmi330_gyro_y_mdps"], record["bmi330_gyro_z_mdps"]))
 
 
 if __name__ == "__main__":

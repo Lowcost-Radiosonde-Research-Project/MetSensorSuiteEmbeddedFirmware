@@ -137,6 +137,7 @@ class RTDInterface:
         discriminant = a * a - 4.0 * b * c
         if discriminant < 0.0:
             return float("nan")
+        # ** 0.5 is the sqrt.
         temperature_c = (-a + discriminant ** 0.5) / (2.0 * b)
 
         if temperature_c < 0.0:

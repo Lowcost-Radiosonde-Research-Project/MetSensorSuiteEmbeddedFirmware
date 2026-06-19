@@ -1,0 +1,127 @@
+MPY: soft reboot
+[WARN] MS5611 init failed: [Errno 110] ETIMEDOUT
+[WARN] BMI330 init failed: [Errno 110] ETIMEDOUT
+[WARN] SD card init failed: no SD card
+t=   10807ms  T= 22.85C  P= 703.63hPa  RH= 79.2%  RTD=   nanC
+t=   11807ms  T= 22.10C  P= 974.99hPa  RH= 87.6%  RTD=   nanC
+t=   12807ms  T= 22.10C  P= 974.95hPa  RH= 87.4%  RTD=   nanC
+t=   13807ms  T= 22.09C  P= 974.86hPa  RH= 87.5%  RTD=   nanC
+t=   14807ms  T= 22.11C  P= 974.83hPa  RH= 87.5%  RTD=   nanC
+t=   15807ms  T= 22.10C  P= 974.81hPa  RH= 87.4%  RTD=   nanC
+t=   16807ms  T= 22.10C  P= 974.76hPa  RH= 87.6%  RTD=   nanC
+t=   17807ms  T= 22.10C  P= 975.02hPa  RH= 87.4%  RTD=   nanC
+t=   18807ms  T= 22.10C  P= 974.96hPa  RH= 87.2%  RTD=   nanC
+t=   19807ms  T= 22.10C  P= 974.85hPa  RH= 87.2%  RTD=   nanC
+t=   20807ms  T= 22.11C  P= 974.77hPa  RH= 87.1%  RTD=   nanC
+t=   21807ms  T= 22.12C  P= 974.82hPa  RH= 87.3%  RTD=   nanC
+t=   22807ms  T= 22.10C  P= 974.78hPa  RH= 87.3%  RTD=-241.94C
+t=   23807ms  T= 22.11C  P= 974.77hPa  RH= 87.2%  RTD=   nanC
+t=   24807ms  T= 22.11C  P= 975.02hPa  RH= 87.3%  RTD=   nanC
+t=   25807ms  T= 22.09C  P= 975.03hPa  RH= 87.2%  RTD=   nanC
+t=   26807ms  T= 22.09C  P= 974.74hPa  RH= 87.4%  RTD=   nanC
+t=   27807ms  T= 22.09C  P= 975.03hPa  RH= 87.1%  RTD=   nanC
+t=   28807ms  T= 22.10C  P= 975.01hPa  RH= 86.9%  RTD=-241.94C
+t=   29807ms  T= 22.10C  P= 975.06hPa  RH= 87.0%  RTD=   nanC
+t=   30807ms  T= 22.09C  P= 974.86hPa  RH= 87.1%  RTD=-241.94C
+t=   31807ms  T= 22.09C  P= 974.89hPa  RH= 87.1%  RTD=   nanC
+t=   32807ms  T= 22.10C  P= 975.26hPa  RH= 87.0%  RTD=   nanC
+t=   33807ms  T= 22.10C  P= 975.09hPa  RH= 86.8%  RTD=   nanC
+t=   34807ms  T= 22.09C  P= 974.99hPa  RH= 86.9%  RTD=   nanC
+t=   35807ms  T= 22.08C  P= 974.90hPa  RH= 87.0%  RTD=   nanC
+t=   36807ms  T= 22.09C  P= 974.88hPa  RH= 87.1%  RTD=   nanC
+t=   37807ms  T= 22.09C  P= 974.82hPa  RH= 87.2%  RTD=   nanC
+t=   38807ms  T= 22.08C  P= 975.01hPa  RH= 87.2%  RTD=-241.94C
+t=   39807ms  T= 22.07C  P= 974.99hPa  RH= 87.2%  RTD=-241.94C
+t=   40807ms  T= 22.10C  P= 975.01hPa  RH= 87.1%  RTD=   nanC
+t=   41807ms  T= 22.09C  P= 975.00hPa  RH= 87.1%  RTD=-241.94C
+t=   42807ms  T= 22.08C  P= 974.96hPa  RH= 87.1%  RTD=-241.94C
+t=   43807ms  T= 22.09C  P= 974.99hPa  RH= 86.9%  RTD=   nanC
+t=   44807ms  T= 22.09C  P= 974.86hPa  RH= 86.8%  RTD=   nanC
+t=   45807ms  T= 22.09C  P= 974.85hPa  RH= 87.0%  RTD=   nanC
+t=   46807ms  T= 22.09C  P= 974.94hPa  RH= 87.2%  RTD=   nanC
+t=   47807ms  T= 22.09C  P= 974.80hPa  RH= 87.4%  RTD=   nanC
+t=   48807ms  T= 22.09C  P= 974.71hPa  RH= 87.6%  RTD=   nanC
+t=   49807ms  T= 22.10C  P= 974.85hPa  RH= 87.6%  RTD=-241.94C
+t=   50807ms  T= 22.10C  P= 974.78hPa  RH= 87.8%  RTD=-241.94C
+t=   51807ms  T= 22.09C  P= 974.86hPa  RH= 87.7%  RTD=   nanC
+t=   52807ms  T= 22.09C  P= 974.88hPa  RH= 87.7%  RTD=   nanC
+t=   53807ms  T= 22.09C  P= 974.94hPa  RH= 87.7%  RTD=   nanC
+t=   54807ms  T= 22.09C  P= 974.82hPa  RH= 87.8%  RTD=-241.94C
+t=   55807ms  T= 22.10C  P= 974.73hPa  RH= 87.8%  RTD=   nanC
+t=   56807ms  T= 22.09C  P= 974.92hPa  RH= 87.8%  RTD=   nanC
+t=   57807ms  T= 22.09C  P= 974.82hPa  RH= 87.7%  RTD=   nanC
+t=   58807ms  T= 22.10C  P= 974.92hPa  RH= 87.7%  RTD=   nanC
+t=   59807ms  T= 22.10C  P= 974.92hPa  RH= 87.7%  RTD=   nanC
+t=   60807ms  T= 22.09C  P= 974.80hPa  RH= 87.3%  RTD=   nanC
+t=   61807ms  T= 22.10C  P= 975.01hPa  RH= 87.3%  RTD=   nanC
+t=   62807ms  T= 22.09C  P= 974.94hPa  RH= 87.2%  RTD=-241.94C
+t=   63807ms  T= 22.10C  P= 974.92hPa  RH= 87.2%  RTD=-241.94C
+t=   64807ms  T= 22.10C  P= 974.98hPa  RH= 87.3%  RTD=   nanC
+t=   65807ms  T= 22.09C  P= 974.91hPa  RH= 87.1%  RTD=   nanC
+t=   66807ms  T= 22.10C  P= 974.85hPa  RH= 87.1%  RTD=   nanC
+t=   67807ms  T= 22.09C  P= 974.82hPa  RH= 87.2%  RTD=   nanC
+t=   68807ms  T= 22.10C  P= 974.95hPa  RH= 87.2%  RTD=-241.94C
+t=   69807ms  T= 22.09C  P= 974.85hPa  RH= 87.4%  RTD=   nanC
+t=   70807ms  T= 22.09C  P= 974.78hPa  RH= 87.5%  RTD=   nanC
+t=   71807ms  T= 22.10C  P= 974.92hPa  RH= 87.7%  RTD=-241.94C
+t=   72807ms  T= 22.09C  P= 974.91hPa  RH= 87.6%  RTD=   nanC
+t=   73807ms  T= 22.09C  P= 974.75hPa  RH= 87.3%  RTD=   nanC
+t=   74807ms  T= 22.09C  P= 974.89hPa  RH= 87.4%  RTD=   nanC
+t=   75807ms  T= 22.09C  P= 974.83hPa  RH= 87.6%  RTD=   nanC
+t=   76807ms  T= 22.09C  P= 974.77hPa  RH= 87.6%  RTD=-241.94C
+t=   77807ms  T= 22.10C  P= 974.85hPa  RH= 87.8%  RTD=   nanC
+t=   78807ms  T= 22.10C  P= 974.90hPa  RH= 87.8%  RTD=   nanC
+t=   79807ms  T= 22.09C  P= 974.75hPa  RH= 87.8%  RTD=   nanC
+t=   80807ms  T= 22.10C  P= 974.93hPa  RH= 87.9%  RTD=   nanC
+t=   81807ms  T= 22.10C  P= 974.95hPa  RH= 87.9%  RTD=   nanC
+t=   82807ms  T= 22.10C  P= 974.85hPa  RH= 88.0%  RTD=   nanC
+t=   83807ms  T= 22.10C  P= 974.95hPa  RH= 87.6%  RTD=   nanC
+t=   84807ms  T= 22.10C  P= 974.85hPa  RH= 87.8%  RTD=-241.94C
+t=   85807ms  T= 22.10C  P= 975.04hPa  RH= 87.7%  RTD=   nanC
+t=   86807ms  T= 22.10C  P= 974.78hPa  RH= 87.5%  RTD=   nanC
+t=   87807ms  T= 22.11C  P= 974.69hPa  RH= 87.8%  RTD=   nanC
+t=   88807ms  T= 22.11C  P= 974.80hPa  RH= 87.9%  RTD=   nanC
+t=   89807ms  T= 22.11C  P= 974.91hPa  RH= 87.5%  RTD=   nanC
+t=   90807ms  T= 22.11C  P= 974.83hPa  RH= 87.6%  RTD=   nanC
+t=   91807ms  T= 22.11C  P= 974.97hPa  RH= 87.4%  RTD=   nanC
+t=   92807ms  T= 22.11C  P= 974.91hPa  RH= 87.1%  RTD=   nanC
+t=   93807ms  T= 22.12C  P= 974.87hPa  RH= 87.2%  RTD=   nanC
+t=   94807ms  T= 22.11C  P= 974.91hPa  RH= 87.3%  RTD=   nanC
+t=   95807ms  T= 22.12C  P= 974.87hPa  RH= 87.4%  RTD=-241.94C
+t=   96807ms  T= 22.11C  P= 974.86hPa  RH= 87.4%  RTD=-241.94C
+t=   97807ms  T= 22.12C  P= 974.76hPa  RH= 87.4%  RTD=   nanC
+t=   98807ms  T= 22.12C  P= 974.96hPa  RH= 87.6%  RTD=   nanC
+t=   99807ms  T= 22.12C  P= 974.87hPa  RH= 87.5%  RTD=   nanC
+t=  100807ms  T= 22.11C  P= 974.86hPa  RH= 87.7%  RTD=   nanC
+t=  101807ms  T= 22.11C  P= 974.83hPa  RH= 87.6%  RTD=   nanC
+t=  102807ms  T= 22.12C  P= 974.79hPa  RH= 87.7%  RTD=-241.94C
+t=  103807ms  T= 22.12C  P= 974.77hPa  RH= 87.7%  RTD=   nanC
+t=  104807ms  T= 22.12C  P= 974.74hPa  RH= 87.8%  RTD=   nanC
+t=  105807ms  T= 22.13C  P= 974.67hPa  RH= 87.9%  RTD=   nanC
+t=  106807ms  T= 22.13C  P= 974.83hPa  RH= 88.0%  RTD=   nanC
+t=  107807ms  T= 22.14C  P= 974.65hPa  RH= 88.0%  RTD=   nanC
+t=  108807ms  T= 22.13C  P= 974.78hPa  RH= 88.1%  RTD=   nanC
+t=  109807ms  T= 22.13C  P= 974.81hPa  RH= 87.9%  RTD=   nanC
+t=  110807ms  T= 22.14C  P= 974.79hPa  RH= 88.0%  RTD=   nanC
+t=  111807ms  T= 22.15C  P= 974.86hPa  RH= 88.0%  RTD=-241.94C
+t=  112807ms  T= 22.14C  P= 974.82hPa  RH= 88.1%  RTD=   nanC
+t=  113807ms  T= 22.15C  P= 974.83hPa  RH= 88.2%  RTD=-241.94C
+t=  114807ms  T= 22.15C  P= 974.81hPa  RH= 88.3%  RTD=   nanC
+t=  115807ms  T= 22.16C  P= 974.85hPa  RH= 88.2%  RTD=   nanC
+t=  116807ms  T= 22.14C  P= 974.81hPa  RH= 88.0%  RTD=   nanC
+t=  117807ms  T= 22.15C  P= 974.84hPa  RH= 88.2%  RTD=-241.94C
+t=  118807ms  T= 22.15C  P= 974.61hPa  RH= 88.0%  RTD=   nanC
+t=  119807ms  T= 22.15C  P= 974.59hPa  RH= 87.9%  RTD=   nanC
+t=  120807ms  T= 22.16C  P= 974.60hPa  RH= 87.9%  RTD=   nanC
+t=  121807ms  T= 22.17C  P= 974.61hPa  RH= 87.9%  RTD=   nanC
+t=  122807ms  T= 22.17C  P= 974.61hPa  RH= 88.1%  RTD=   nanC
+t=  123807ms  T= 22.17C  P= 974.62hPa  RH= 88.1%  RTD=   nanC
+t=  124807ms  T= 22.17C  P= 974.68hPa  RH= 88.0%  RTD=   nanC
+t=  125807ms  T= 22.18C  P= 974.69hPa  RH= 88.0%  RTD=   nanC
+t=  126807ms  T= 22.18C  P= 974.57hPa  RH= 87.9%  RTD=   nanC
+t=  127807ms  T= 22.19C  P= 974.76hPa  RH= 87.9%  RTD=-241.94C
+t=  128807ms  T= 22.17C  P= 974.68hPa  RH= 87.7%  RTD=   nanC
+t=  129807ms  T= 22.16C  P= 974.63hPa  RH= 87.6%  RTD=   nanC
+t=  130807ms  T= 22.17C  P= 974.59hPa  RH= 87.8%  RTD=   nanC
+t=  131807ms  T= 22.17C  P= 974.62hPa  RH= 88.0%  RTD=-241.94C
+t=  132807ms  T= 22.17C  P= 974.56hPa  RH= 88.0%  RTD=   nanC
