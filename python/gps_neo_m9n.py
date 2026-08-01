@@ -12,6 +12,7 @@ fix quality field is non-zero and the corresponding fields are present.
 
 Author: Nathaniel Peyer
 Date: 06-15-2026
+Last edited: 06-24-2026
 """
 
 from packet import NAN, NO_DATA_U8

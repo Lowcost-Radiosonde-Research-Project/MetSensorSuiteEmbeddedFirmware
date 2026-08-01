@@ -37,7 +37,7 @@ MS5611_I2C_ADDR = 0x77
  
 # BMI330 (6-axis IMU).
 # TODO: confirm address and bus once hardware is finalized.
-BMI330_I2C_ADDR = 0x68
+BMI330_I2C_ADDR = 0x69
  
 # ADS1115 (4-wire PT1000 RTD interface).
 ADS1115_I2C_ADDR = 0x48
@@ -92,7 +92,7 @@ RTD_SUBZERO_ITERATIONS = 5
 GPS_UART_ID = 1
 GPS_UART_TX_PIN = 8
 GPS_UART_RX_PIN = 9
-GPS_UART_BAUD_RATE = 9600
+GPS_UART_BAUD_RATE = 38400
  
 # UART link to the FC Pico - one 38-byte iMet-1-RSB frame (see
 # imet_packet.py), framed by link_uart.send_record(), is sent each
@@ -123,8 +123,8 @@ REGULATOR_ENABLE_DELAY_MS = 50
  
 # Status LEDs (confirmed 2026-06-20).
 # LED0: power/altitude status. On below LED0_ALTITUDE_THRESHOLD_FT,
-# off above it (see main.py altitude-gated LED logic).
-# LED1: GPS fix status. Off until the GPS reports a valid fix, then on.
+# off above it (see main.py altitude-gated LED logic, RED).
+# LED1: GPS fix status. Off until the GPS reports a valid fix, then on (Blue).
 # TODO: LED0_ALTITUDE_THRESHOLD_FT is currently MSL (sea level), not
 # true AGL - revisit once launching from a site with non-trivial
 # ground elevation (decided 2026-06-20 to defer this).

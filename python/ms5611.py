@@ -9,6 +9,7 @@ result.
 
 Author: Nathaniel Peyer
 Date: 06-15-2026
+Last edited: 06-24-2026
 """
 
 import time
@@ -102,6 +103,13 @@ class MS5611:
     def read(self):
         """Read and compensate temperature and pressure.
 
+        Compensation formulas per MS5611 datasheet (AN520):
+          dT   = D2 - C5 * 2^8
+          TEMP = 2000 + dT * C6 / 2^23
+          OFF  = C2 * 2^17 + (C4 * dT) / 2^6
+          SENS = C1 * 2^16 + (C3 * dT) / 2^7
+          P    = (D1 * SENS / 2^21 - OFF) / 2^15
+
         Returns:
             A tuple (temperature_c, pressure_hpa).
 
@@ -111,27 +119,28 @@ class MS5611:
         d2 = self._read_adc(_CMD_CONVERT_D2 | _OSR)
         d1 = self._read_adc(_CMD_CONVERT_D1 | _OSR)
 
-        dt = d2 - self._c5 * 256
+        dt   = d2 - self._c5 * 256
         temp = 2000 + _idiv(dt * self._c6, 2 ** 23)
 
-        off = self._c2 * (2 ** 16) + _idiv(self._c4 * dt, 2 ** 7)
-        sens = self._c1 * (2 ** 15) + _idiv(self._c3 * dt, 2 ** 8)
+        # Corrected exponents per datasheet AN520:
+        #   OFF:  C2 * 2^17, (C4 * dT) / 2^6
+        #   SENS: C1 * 2^16, (C3 * dT) / 2^7
+        off  = self._c2 * (2 ** 17) + _idiv(self._c4 * dt, 2 ** 6)
+        sens = self._c1 * (2 ** 16) + _idiv(self._c3 * dt, 2 ** 7)
 
         # Second-order temperature compensation for T < 20.00 C.
         if temp < 2000:
-            t2 = _idiv(dt * dt, 2 ** 31)
-            off2 = _idiv(5 * (temp - 2000) ** 2, 2)
+            t2    = _idiv(dt * dt, 2 ** 31)
+            off2  = _idiv(5 * (temp - 2000) ** 2, 2)
             sens2 = _idiv(5 * (temp - 2000) ** 2, 4)
             if temp < -1500:
-                off2 += 7 * (temp + 1500) ** 2
+                off2  += 7 * (temp + 1500) ** 2
                 sens2 += _idiv(11 * (temp + 1500) ** 2, 2)
         else:
-            t2 = 0
-            off2 = 0
-            sens2 = 0
+            t2 = off2 = sens2 = 0
 
         temp -= t2
-        off -= off2
+        off  -= off2
         sens -= sens2
 
         pressure = _idiv(_idiv(d1 * sens, 2 ** 21) - off, 2 ** 15)

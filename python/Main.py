@@ -15,7 +15,7 @@ take down the whole log.
 
 Author: Nathaniel Peyer
 Date: 06-14-2026
-Last edited: 06-15-2026 
+Last edited: 06-24-2026
 """
 
 import time
@@ -90,31 +90,30 @@ def main():
 
     try:
         gps_uart = UART(config.GPS_UART_ID,
-                         baudrate=config.GPS_UART_BAUD_RATE,
-                         tx=Pin(config.GPS_UART_TX_PIN),
-                         rx=Pin(config.GPS_UART_RX_PIN))
+                        baudrate=config.GPS_UART_BAUD_RATE,
+                        tx=Pin(config.GPS_UART_TX_PIN),
+                        rx=Pin(config.GPS_UART_RX_PIN))
     except (OSError, ValueError) as e:
         print("[WARN] GPS UART init failed: {}".format(e))
         gps_uart = None
 
     try:
         link_port = UART(config.LINK_UART_ID,
-                          baudrate=config.LINK_UART_BAUD_RATE,
-                          tx=Pin(config.LINK_UART_TX_PIN),
-                          rx=Pin(config.LINK_UART_RX_PIN))
+                         baudrate=config.LINK_UART_BAUD_RATE,
+                         tx=Pin(config.LINK_UART_TX_PIN),
+                         rx=Pin(config.LINK_UART_RX_PIN))
     except (OSError, ValueError) as e:
         print("[WARN] Link UART init failed: {}".format(e))
         link_port = None
 
     # ADS1115 and BME280 are on I2C bus 0 (I2C1 in config.py naming).
     # MS5611 and BMI330 are on I2C bus 1 (I2C2 in config.py naming).
-    bme = _safe_init("BME280", init_bme280, i2c1, config.BME280_I2C_ADDR)
-    rtd = _safe_init("RTD/ADS1115", init_ads1115, i2c1,
-                      config.ADS1115_I2C_ADDR)
-    ms5611 = _safe_init("MS5611", init_ms5611, i2c2, config.MS5611_I2C_ADDR)
-    bmi330 = _safe_init("BMI330", init_bmi330, i2c2, config.BMI330_I2C_ADDR)
-    gps = _safe_init("GPS/NEO-M9N", init_gps, gps_uart)
-    sd_logger = _safe_init("SD card", init_sd_logger)
+    bme       = _safe_init("BME280",      init_bme280,  i2c1, config.BME280_I2C_ADDR)
+    rtd       = _safe_init("RTD/ADS1115", init_ads1115, i2c1, config.ADS1115_I2C_ADDR)
+    ms5611    = _safe_init("MS5611",      init_ms5611,  i2c2, config.MS5611_I2C_ADDR)
+    bmi330    = _safe_init("BMI330",      init_bmi330,  i2c2, config.BMI330_I2C_ADDR)
+    gps       = _safe_init("GPS/NEO-M9N", init_gps,     gps_uart)
+    sd_logger = _safe_init("SD card",     init_sd_logger)
 
     next_sample_ms = time.ticks_ms()
 
@@ -122,145 +121,162 @@ def main():
     # Wraps at 65536 (imet_packet.pack_ptu_enhanced_packet masks it too).
     imet_pkt_num = 0
 
-    while True:
-        now_ms = time.ticks_ms()
-        if time.ticks_diff(now_ms, next_sample_ms) < 0:
-            time.sleep_ms(1)
-            continue
-        next_sample_ms = time.ticks_add(next_sample_ms,
-                                         config.SAMPLE_INTERVAL_MS)
+    try:
+        while True:
+            now_ms = time.ticks_ms()
+            if time.ticks_diff(now_ms, next_sample_ms) < 0:
+                time.sleep_ms(1)
+                continue
+            next_sample_ms = time.ticks_add(next_sample_ms,
+                                            config.SAMPLE_INTERVAL_MS)
 
-        record = packet.new_blank_record()
-        record["timestamp_ms"] = now_ms
+            record = packet.new_blank_record()
+            record["timestamp_ms"] = now_ms
 
-        if bme is not None:
-            try:
-                (record["bme280_temp_c"],
-                 record["bme280_pressure_hpa"],
-                 record["bme280_humidity_pct"]) = bme.read()
-            except OSError as e:
-                print("[WARN] BME280 read failed: {}".format(e))
+            if bme is not None:
+                try:
+                    (record["bme280_temp_c"],
+                     record["bme280_pressure_hpa"],
+                     record["bme280_humidity_pct"]) = bme.read()
+                except OSError as e:
+                    print("[WARN] BME280 read failed: {}".format(e))
 
-        if ms5611 is not None:
-            try:
-                (record["ms5611_temp_c"],
-                 record["ms5611_pressure_hpa"]) = ms5611.read()
-            except OSError as e:
-                print("[WARN] MS5611 read failed: {}".format(e))
+            if ms5611 is not None:
+                try:
+                    (record["ms5611_temp_c"],
+                     record["ms5611_pressure_hpa"]) = ms5611.read()
+                except OSError as e:
+                    print("[WARN] MS5611 read failed: {}".format(e))
 
-        if rtd is not None:
-            try:
-                record["rtd_temp_c"] = rtd.read_temperature_c()
-            except OSError as e:
-                print("[WARN] RTD/ADS1115 read failed: {}".format(e))
+            if rtd is not None:
+                try:
+                    record["rtd_temp_c"] = rtd.read_temperature_c()
+                except OSError as e:
+                    print("[WARN] RTD/ADS1115 read failed: {}".format(e))
 
-        if bmi330 is not None:
-            try:
-                (record["bmi330_accel_x_mg"],
-                 record["bmi330_accel_y_mg"],
-                 record["bmi330_accel_z_mg"],
-                 record["bmi330_gyro_x_mdps"],
-                 record["bmi330_gyro_y_mdps"],
-                 record["bmi330_gyro_z_mdps"]) = bmi330.read()
-            except OSError as e:
-                print("[WARN] BMI330 read failed: {}".format(e))
+            if bmi330 is not None:
+                try:
+                    (record["bmi330_accel_x_mg"],
+                     record["bmi330_accel_y_mg"],
+                     record["bmi330_accel_z_mg"],
+                     record["bmi330_gyro_x_mdps"],
+                     record["bmi330_gyro_y_mdps"],
+                     record["bmi330_gyro_z_mdps"]) = bmi330.read()
+                except OSError as e:
+                    print("[WARN] BMI330 read failed: {}".format(e))
 
-        if gps is not None:
-            try:
-                (record["gps_lat_deg"],
-                 record["gps_lon_deg"],
-                 record["gps_alt_m"],
-                 record["gps_num_sats"],
-                 record["gps_hour"],
-                 record["gps_minute"],
-                 record["gps_second"]) = gps.read()
-            except OSError as e:
-                print("[WARN] GPS/NEO-M9N read failed: {}".format(e))
+            if gps is not None:
+                try:
+                    (record["gps_lat_deg"],
+                     record["gps_lon_deg"],
+                     record["gps_alt_m"],
+                     record["gps_num_sats"],
+                     record["gps_hour"],
+                     record["gps_minute"],
+                     record["gps_second"]) = gps.read()
+                except OSError as e:
+                    print("[WARN] GPS/NEO-M9N read failed: {}".format(e))
 
-        # --- Status LED logic ---
-        # gps_alt_m is MSL altitude straight from the GPS fix (no
-        # ground-elevation offset applied yet - see config.py note on
-        # LED0_ALTITUDE_THRESHOLD_FT for the AGL TODO). NaN until the
-        # GPS has a valid fix, which read() guarantees via NO_DATA
-        # sentinels - guard with the standard NaN self-inequality check
-        # rather than comparing directly, since NaN comparisons are
-        # always False and would otherwise silently leave LED0 on.
-        gps_alt_m = record["gps_alt_m"]
-        if gps_alt_m == gps_alt_m:
-            if not gps_has_fix:
-                gps_has_fix = True
-                led1.value(1)
-            altitude_ft = gps_alt_m * 3.28084
-            if altitude_ft >= config.LED0_ALTITUDE_THRESHOLD_FT:
-                led0.value(0)
-            else:
-                led0.value(1)
+            # --- Status LED logic ---
+            # gps_alt_m is MSL altitude straight from the GPS fix (no
+            # ground-elevation offset applied yet - see config.py note on
+            # LED0_ALTITUDE_THRESHOLD_FT for the AGL TODO). NaN until the
+            # GPS has a valid fix, which read() guarantees via NO_DATA
+            # sentinels - guard with the standard NaN self-inequality check
+            # rather than comparing directly, since NaN comparisons are
+            # always False and would otherwise silently leave LED0 on.
+            gps_alt_m = record["gps_alt_m"]
+            if gps_alt_m == gps_alt_m:
+                if not gps_has_fix:
+                    gps_has_fix = True
+                    led1.value(1)
+                altitude_ft = gps_alt_m * 3.28084
+                if altitude_ft >= config.LED0_ALTITUDE_THRESHOLD_FT:
+                    led0.value(0)
+                else:
+                    led0.value(1)
 
-        record_bytes = packet.pack_record(record)
+            record_bytes = packet.pack_record(record)
 
+            if sd_logger is not None:
+                try:
+                    sd_logger.write_record(record_bytes)
+                except (OSError, MemoryError) as e:
+                    print("[WARN] SD card log append failed: {}".format(e))
+
+            # --- iMet-1-RSB downlink frame ---
+            # Sensor -> iMet field mapping (see imet_packet.py for field
+            # definitions; this mapping is just keyword arguments below,
+            # so it's a one-line change if you want a different sensor in
+            # a given slot):
+            #   GPS lat/lon/alt/num_sats/hour/min/sec -> straight from the
+            #                               GPS record fields
+            #   P    (pressure)          -> ms5611_pressure_hpa (TODO:
+            #                               confirm - currently NAN since
+            #                               MS5611 read may still fail on
+            #                               first hardware bring-up)
+            #   T    (primary temp)      -> bme280_temp_c
+            #   U    (humidity)          -> bme280_humidity_pct
+            #   Vbat (battery voltage)   -> not yet measured; NAN = no data
+            #   Tint (internal temp)     -> bme280_temp_c (TODO: confirm -
+            #                               currently duplicates T)
+            #   Tpr  (probe temp)        -> rtd_temp_c
+            #   Tu   (aux temp)          -> not yet mapped; NAN = no data
+            imet_frame = imet_packet.pack_frame(
+                {
+                    "lat_deg":  record["gps_lat_deg"],
+                    "lon_deg":  record["gps_lon_deg"],
+                    "alt_m":    record["gps_alt_m"],
+                    "num_sats": record["gps_num_sats"],
+                    "hour":     record["gps_hour"],
+                    "minute":   record["gps_minute"],
+                    "second":   record["gps_second"],
+                },
+                {
+                    "pkt_num":      imet_pkt_num,
+                    "pressure_hpa": record["ms5611_pressure_hpa"],
+                    "temp_c":       record["bme280_temp_c"],
+                    "humidity_pct": record["bme280_humidity_pct"],
+                    "vbat_v":       packet.NAN,
+                    "temp_int_c":   record["bme280_temp_c"],
+                    "temp_probe_c": record["rtd_temp_c"],
+                    "temp_u_c":     packet.NAN,
+                })
+            imet_pkt_num = (imet_pkt_num + 1) & 0xFFFF
+
+            if link_port is not None:
+                try:
+                    link_uart.send_record(link_port, imet_frame)
+                except OSError as e:
+                    print("[WARN] Link UART send failed: {}".format(e))
+
+            print("t={:>8d}ms  T={:6.2f}C  P={:7.2f}hPa  RH={:5.1f}%  "
+                  "RTD={:6.2f}C  MS_T={:6.2f}C  MS_P={:7.2f}hPa  "
+                  "AX={:7.1f}mg  AY={:7.1f}mg  AZ={:7.1f}mg  "
+                  "GX={:8.1f}mdps  GY={:8.1f}mdps  GZ={:8.1f}mdps  "
+                  "LAT={:9.5f}  LON={:10.5f}  ALT={:7.1f}m  "
+                  "SATS={:3d}".format(
+                      record["timestamp_ms"], record["bme280_temp_c"],
+                      record["bme280_pressure_hpa"],
+                      record["bme280_humidity_pct"], record["rtd_temp_c"],
+                      record["ms5611_temp_c"], record["ms5611_pressure_hpa"],
+                      record["bmi330_accel_x_mg"], record["bmi330_accel_y_mg"],
+                      record["bmi330_accel_z_mg"], record["bmi330_gyro_x_mdps"],
+                      record["bmi330_gyro_y_mdps"], record["bmi330_gyro_z_mdps"],
+                      record["gps_lat_deg"], record["gps_lon_deg"],
+                      record["gps_alt_m"], record["gps_num_sats"]))
+
+    except KeyboardInterrupt:
+        pass
+
+    finally:
+        print("[INFO] Shutting down...")
         if sd_logger is not None:
             try:
-                sd_logger.write_record(record_bytes)
-            except OSError as e:
-                print("[WARN] SD card log append failed: {}".format(e))
-
-        # --- iMet-1-RSB downlink frame ---
-        # Sensor -> iMet field mapping (see imet_packet.py for field
-        # definitions; this mapping is just keyword arguments below,
-        # so it's a one-line change if you want a different sensor in
-        # a given slot):
-        #   GPS lat/lon/alt/num_sats/hour/min/sec -> straight from the
-        #                               GPS record fields
-        #   P    (pressure)          -> ms5611_pressure_hpa (TODO:
-        #                               confirm - currently NAN since
-        #                               MS5611 read may still fail on
-        #                               first hardware bring-up)
-        #   T    (primary temp)      -> bme280_temp_c
-        #   U    (humidity)          -> bme280_humidity_pct
-        #   Vbat (battery voltage)   -> not yet measured; NAN = no data
-        #   Tint (internal temp)     -> bme280_temp_c (TODO: confirm -
-        #                               currently duplicates T)
-        #   Tpr  (probe temp)        -> rtd_temp_c
-        #   Tu   (aux temp)          -> not yet mapped; NAN = no data
-        imet_frame = imet_packet.pack_frame(
-            {
-                "lat_deg": record["gps_lat_deg"],
-                "lon_deg": record["gps_lon_deg"],
-                "alt_m": record["gps_alt_m"],
-                "num_sats": record["gps_num_sats"],
-                "hour": record["gps_hour"],
-                "minute": record["gps_minute"],
-                "second": record["gps_second"],
-            },
-            {
-                "pkt_num": imet_pkt_num,
-                "pressure_hpa": record["ms5611_pressure_hpa"],
-                "temp_c": record["bme280_temp_c"],
-                "humidity_pct": record["bme280_humidity_pct"],
-                "vbat_v": packet.NAN,
-                "temp_int_c": record["bme280_temp_c"],
-                "temp_probe_c": record["rtd_temp_c"],
-                "temp_u_c": packet.NAN,
-            })
-        imet_pkt_num = (imet_pkt_num + 1) & 0xFFFF
-
-        if link_port is not None:
-            try:
-                link_uart.send_record(link_port, imet_frame)
-            except OSError as e:
-                print("[WARN] Link UART send failed: {}".format(e))
-
-        print("t={:>8d}ms  T={:6.2f}C  P={:7.2f}hPa  RH={:5.1f}%  "
-              "RTD={:6.2f}C  MS_T={:6.2f}C  MS_P={:7.2f}hPa  "
-              "AX={:7.1f}mg  AY={:7.1f}mg  AZ={:7.1f}mg  "
-              "GX={:8.1f}mdps  GY={:8.1f}mdps  GZ={:8.1f}mdps".format(
-                  record["timestamp_ms"], record["bme280_temp_c"],
-                  record["bme280_pressure_hpa"],
-                  record["bme280_humidity_pct"], record["rtd_temp_c"],
-                  record["ms5611_temp_c"], record["ms5611_pressure_hpa"],
-                  record["bmi330_accel_x_mg"], record["bmi330_accel_y_mg"],
-                  record["bmi330_accel_z_mg"], record["bmi330_gyro_x_mdps"],
-                  record["bmi330_gyro_y_mdps"], record["bmi330_gyro_z_mdps"]))
+                sd_logger.close()
+                print("[INFO] SD card closed cleanly.")
+            except Exception as e:
+                print("[WARN] SD close failed: {}".format(e))
 
 
 if __name__ == "__main__":
