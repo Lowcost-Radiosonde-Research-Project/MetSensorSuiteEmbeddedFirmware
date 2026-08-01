@@ -8,7 +8,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "A"
+      "sch_revision": "B"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -458,7 +458,7 @@
         "uuid": "63c7c074-dbc9-4433-b26d-8a099c78afdf"
       }
     ],
-    "used_designators": "#PWR32,L13,C33",
+    "used_designators": "FB1,L2,L24,L26,L123,L132-133,#PWR5-37,C3,C25-26,C42,C53,C92,C112,C123,C126,C132-133,C142,C152-154,C182,J1-3,R1,R152,R162,R172,U3",
     "variants": []
   },
   "sheets": [
