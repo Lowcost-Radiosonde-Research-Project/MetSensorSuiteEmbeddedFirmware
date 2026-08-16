@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "abf1b753-451c-4c9b-b431-72eb6864c576")
+	(paper "USLetter")
+	(title_block
+		(title "Micro SD Card Holder & VDD")
+		(rev "A")
+		(company "Valparasio University")
+		(comment 1 "Author: Nathaniel Peyer")
+	)
+	(lib_symbols)
+)

@@ -454,17 +454,29 @@
     "top_level_sheets": [
       {
         "filename": "hardware.kicad_sch",
-        "name": "hardware",
+        "name": "RaspberryPiPico_Radio",
         "uuid": "63c7c074-dbc9-4433-b26d-8a099c78afdf"
       }
     ],
-    "used_designators": "FB1,L2,L24,L26,L123,L132-133,#PWR5-37,C3,C25-26,C42,C53,C92,C112,C123,C126,C132-133,C142,C152-154,C182,J1-3,R1,R152,R162,R172,U3",
+    "used_designators": "U4-5,C4,RT1,#PWR38-49,R1-9,JP1-2",
     "variants": []
   },
   "sheets": [
     [
       "63c7c074-dbc9-4433-b26d-8a099c78afdf",
-      "hardware"
+      "RaspberryPiPico_Radio"
+    ],
+    [
+      "b1a0d313-6453-49e4-a1c8-9c912bdab17e",
+      "I2C0"
+    ],
+    [
+      "b737d683-8238-42b2-9dc6-cacadbc046f5",
+      "I2C1_GPS"
+    ],
+    [
+      "43eeeb2a-883a-4738-8b2b-317d62bf6c96",
+      "SDCard_VDD"
     ]
   ],
   "text_variables": {},
