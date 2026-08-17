@@ -3543,14 +3543,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 105.41 101.6 0)
+		(property "Value" "GND"
+			(at 107.95 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -3862,14 +3863,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 95.25 146.05 0)
+		(property "Value" "GND"
+			(at 97.79 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4104,14 +4106,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 88.9 102.87 0)
+		(property "Value" "GND"
+			(at 91.44 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4599,14 +4602,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 160.02 111.76 0)
+		(property "Value" "GND"
+			(at 162.56 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -4755,14 +4759,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 55.88 111.76 0)
+		(property "Value" "GND"
+			(at 58.42 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -5093,14 +5098,15 @@
 				)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 200.66 111.76 0)
+		(property "Value" "GND"
+			(at 203.2 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
