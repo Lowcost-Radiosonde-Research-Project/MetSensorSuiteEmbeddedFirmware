@@ -2764,7 +2764,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "W3011:XDCR_W3011"
+		(property "Footprint" "footprints:XDCR_W3011"
 			(at 119.38 80.01 0)
 			(hide yes)
 			(show_name no)

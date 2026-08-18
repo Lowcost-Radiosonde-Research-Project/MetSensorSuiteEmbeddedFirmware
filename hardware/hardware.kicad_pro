@@ -28,7 +28,72 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|1397000|1092200|b437269f-9917-4975-b67a-8619a91576ca|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|3390900|927100|8f98a5ac-b3e3-46b6-b392-770811baa630|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|596900|596900|b3e29508-294e-4b53-8d24-75b320d6ba2b|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "lib_symbol_mismatch|800100|622300|cfff5ba5-c307-4892-aa86-8ea41dbf080d|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
+      [
+        "pin_to_pin|1206500|228600|025f36b5-3991-4994-87c2-59b66287b088|d3540610-eda5-4251-9e11-5ec4d4031903|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        "Copied from TI spec."
+      ],
+      [
+        "pin_to_pin|1752600|812800|572b4d21-746b-4e0b-9475-02e9f81f0a53|9474f2c8-85e5-4178-89e9-54a7a49c51d1|/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e|/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        ""
+      ],
+      [
+        "pin_to_pin|2603500|1181100|d3540610-eda5-4251-9e11-5ec4d4031903|9474f2c8-85e5-4178-89e9-54a7a49c51d1|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        "Copied from TI spec."
+      ],
+      [
+        "pin_to_pin|2603500|1206500|9474f2c8-85e5-4178-89e9-54a7a49c51d1|025f36b5-3991-4994-87c2-59b66287b088|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        ""
+      ],
+      [
+        "pin_to_pin|3009900|1181100|b3612ab3-3c27-4b38-b45e-970d76185dbd|d3540610-eda5-4251-9e11-5ec4d4031903|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        "Copied from TI spec."
+      ],
+      [
+        "pin_to_pin|3009900|1206500|ff60e088-cf81-4158-8d8e-5c77cbe7ac32|b3612ab3-3c27-4b38-b45e-970d76185dbd|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf",
+        "Copied from TI spec."
+      ],
+      [
+        "power_pin_not_driven|1574800|1397000|b56a36f9-29f1-4770-bdc0-bd9b89a85465|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|",
+        "Copied from TI spec."
+      ],
+      [
+        "power_pin_not_driven|3365500|1003300|111fda67-5210-48cf-8ef8-d7836d1f9c53|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|",
+        "Copied from TI spec."
+      ],
+      [
+        "power_pin_not_driven|3365500|1028700|82f10bc9-9d3a-4824-adb0-3bdb75d352aa|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|",
+        "Copied from TI spec."
+      ],
+      [
+        "power_pin_not_driven|3365500|1079500|35336c04-177a-4ecd-88ea-fa006281e6c5|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf|/63c7c074-dbc9-4433-b26d-8a099c78afdf|",
+        "Copied from TI spec."
+      ],
+      [
+        "power_pin_not_driven|698500|622300|ed8f6750-1fc9-414d-bd3a-451caefaa753|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96|/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|800100|622300|737a5055-b15e-42fd-95f8-c681d46fa2ef|00000000-0000-0000-0000-000000000000|/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96|/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -446,6 +511,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -458,7 +531,7 @@
         "uuid": "63c7c074-dbc9-4433-b26d-8a099c78afdf"
       }
     ],
-    "used_designators": "J3,B1,U8,L3,D1,#PWR2-4,#PWR6-8,#PWR10-26,#PWR30-36,#PWR61-70,SW1-2,C4,C45-46,FB1",
+    "used_designators": "SW1",
     "variants": []
   },
   "sheets": [

@@ -20,8 +20,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "B"
-				(at 5.08 3.81 0)
+			(property "Reference" "B41"
+				(at 5.08 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -324,7 +324,9 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+			)
+			(symbol "1079_1_1"
+				(pin power_in line
 					(at 0 0 0)
 					(length 2.54)
 					(name "1"
@@ -342,7 +344,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 10.16 0 180)
 					(length 2.54)
 					(name "2"
@@ -360,7 +362,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 10.16 -5.08 180)
 					(length 2.54)
 					(name "3"
@@ -378,7 +380,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin power_in line
 					(at 0 -5.08 0)
 					(length 2.54)
 					(name "4"
@@ -399,17 +401,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Micro_SD_Card"
-			(pin_names
-				(offset 1.016)
-			)
+		(symbol "Connector:Micro_SD_Card_Det1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at -16.51 15.24 0)
+				(at -16.51 17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -418,8 +417,8 @@
 					)
 				)
 			)
-			(property "Value" "Micro_SD_Card"
-				(at 16.51 15.24 0)
+			(property "Value" "Micro_SD_Card_Det1"
+				(at 16.51 17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -430,7 +429,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 29.21 7.62 0)
+				(at 52.07 17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -440,8 +439,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/693072010801.pdf"
-				(at 0 0 0)
+			(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf"
+				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -451,7 +450,7 @@
 					)
 				)
 			)
-			(property "Description" "Micro SD Card Socket"
+			(property "Description" "Micro SD Card Socket with one card detection pin"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -484,11 +483,11 @@
 					)
 				)
 			)
-			(symbol "Micro_SD_Card_0_1"
+			(symbol "Micro_SD_Card_Det1_0_1"
 				(polyline
 					(pts
-						(xy -8.89 -11.43) (xy -8.89 8.89) (xy -1.27 8.89) (xy 2.54 12.7) (xy 3.81 12.7) (xy 3.81 11.43)
-						(xy 6.35 11.43) (xy 7.62 12.7) (xy 20.32 12.7) (xy 20.32 -11.43) (xy -8.89 -11.43)
+						(xy -8.89 -8.89) (xy -8.89 11.43) (xy -1.27 11.43) (xy 2.54 15.24) (xy 3.81 15.24) (xy 3.81 13.97)
+						(xy 6.35 13.97) (xy 7.62 15.24) (xy 20.32 15.24) (xy 20.32 -8.89) (xy -8.89 -8.89)
 					)
 					(stroke
 						(width 0.254)
@@ -499,10 +498,21 @@
 					)
 				)
 				(rectangle
+					(start -7.62 10.795)
+					(end -5.08 9.525)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
 					(start -7.62 8.255)
 					(end -5.08 6.985)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -513,7 +523,7 @@
 					(start -7.62 5.715)
 					(end -5.08 4.445)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -524,7 +534,7 @@
 					(start -7.62 3.175)
 					(end -5.08 1.905)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -535,7 +545,7 @@
 					(start -7.62 0.635)
 					(end -5.08 -0.635)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -546,7 +556,7 @@
 					(start -7.62 -1.905)
 					(end -5.08 -3.175)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -557,7 +567,7 @@
 					(start -7.62 -4.445)
 					(end -5.08 -5.715)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -568,18 +578,7 @@
 					(start -7.62 -6.985)
 					(end -5.08 -8.255)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -7.62 -9.525)
-					(end -5.08 -10.795)
-					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -588,7 +587,7 @@
 				)
 				(polyline
 					(pts
-						(xy 16.51 12.7) (xy 16.51 13.97) (xy -19.05 13.97) (xy -19.05 -16.51) (xy 16.51 -16.51) (xy 16.51 -11.43)
+						(xy 16.51 15.24) (xy 16.51 16.51) (xy -19.05 16.51) (xy -19.05 -16.51) (xy 16.51 -16.51) (xy 16.51 -8.89)
 					)
 					(stroke
 						(width 0.254)
@@ -599,9 +598,9 @@
 					)
 				)
 			)
-			(symbol "Micro_SD_Card_1_1"
+			(symbol "Micro_SD_Card_Det1_1_1"
 				(pin bidirectional line
-					(at -22.86 7.62 0)
+					(at -22.86 10.16 0)
 					(length 3.81)
 					(name "DAT2"
 						(effects
@@ -619,7 +618,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -22.86 5.08 0)
+					(at -22.86 7.62 0)
 					(length 3.81)
 					(name "DAT3/CD"
 						(effects
@@ -637,7 +636,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 2.54 0)
+					(at -22.86 5.08 0)
 					(length 3.81)
 					(name "CMD"
 						(effects
@@ -655,7 +654,7 @@
 					)
 				)
 				(pin power_in line
-					(at -22.86 0 0)
+					(at -22.86 2.54 0)
 					(length 3.81)
 					(name "VDD"
 						(effects
@@ -673,7 +672,7 @@
 					)
 				)
 				(pin input line
-					(at -22.86 -2.54 0)
+					(at -22.86 0 0)
 					(length 3.81)
 					(name "CLK"
 						(effects
@@ -691,7 +690,7 @@
 					)
 				)
 				(pin power_in line
-					(at -22.86 -5.08 0)
+					(at -22.86 -2.54 0)
 					(length 3.81)
 					(name "VSS"
 						(effects
@@ -709,7 +708,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -22.86 -7.62 0)
+					(at -22.86 -5.08 0)
 					(length 3.81)
 					(name "DAT0"
 						(effects
@@ -727,7 +726,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -22.86 -10.16 0)
+					(at -22.86 -7.62 0)
 					(length 3.81)
 					(name "DAT1"
 						(effects
@@ -745,7 +744,25 @@
 					)
 				)
 				(pin passive line
-					(at 20.32 -15.24 180)
+					(at -22.86 -12.7 0)
+					(length 3.81)
+					(name "DET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 -12.7 180)
 					(length 3.81)
 					(name "SHIELD"
 						(effects
@@ -1456,7 +1473,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_DPST_x2"
+		(symbol "Switch:SW_SPST"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1476,7 +1493,7 @@
 					)
 				)
 			)
-			(property "Value" "SW_DPST_x2"
+			(property "Value" "SW_SPST"
 				(at 0 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1508,7 +1525,7 @@
 					)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+			(property "Description" "Single Pole Single Throw (SPST) switch"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1530,7 +1547,7 @@
 					)
 				)
 			)
-			(symbol "SW_DPST_x2_0_0"
+			(symbol "SW_SPST_0_0"
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -1566,7 +1583,7 @@
 					)
 				)
 			)
-			(symbol "SW_DPST_x2_1_1"
+			(symbol "SW_SPST_1_1"
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1596,44 +1613,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "SW_DPST_x2_2_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1790,6 +1769,121 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -1982,10 +2076,6 @@
 		(uuid "f4a86feb-4c48-4d2a-a499-9e3f23139792")
 	)
 	(no_connect
-		(at 166.37 143.51)
-		(uuid "8435811d-230b-460b-8ade-f75350012c7c")
-	)
-	(no_connect
 		(at 123.19 120.65)
 		(uuid "8bf53c27-03eb-4c7e-b114-a9f990f957bf")
 	)
@@ -2032,6 +2122,16 @@
 			(type default)
 		)
 		(uuid "1b42bac9-edb1-4d07-a346-3d6328f1d19f")
+	)
+	(wire
+		(pts
+			(xy 106.68 143.51) (xy 123.19 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e8b0724-879b-4678-a976-7dfce44b5528")
 	)
 	(wire
 		(pts
@@ -2205,6 +2305,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 143.51) (xy 167.64 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c93dc34-6477-45a9-add1-e2f2fc2b58e5")
+	)
+	(wire
+		(pts
 			(xy 63.5 57.15) (xy 63.5 63.5)
 		)
 		(stroke
@@ -2312,6 +2422,16 @@
 			(type default)
 		)
 		(uuid "cd5e9aba-6ba9-40fc-940a-3207672739b3")
+	)
+	(wire
+		(pts
+			(xy 166.37 143.51) (xy 167.64 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8f185ce-747e-43fb-8d48-855a13a7c563")
 	)
 	(wire
 		(pts
@@ -2435,6 +2555,30 @@
 			)
 		)
 	)
+	(global_label "SD_DETECT"
+		(shape output)
+		(at 106.68 143.51 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c6a6ec04-49ee-46ca-a1d5-19351c7abffe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.4745 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SD_TX"
 		(shape input)
 		(at 106.68 125.73 180)
@@ -2532,107 +2676,6 @@
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96"
 					(reference "#PWR062")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Micro_SD_Card")
-		(at 146.05 128.27 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "11e90304-6d56-466e-b09c-71b66b01fd98")
-		(property "Reference" "J3"
-			(at 146.685 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Micro_SD_Card"
-			(at 146.685 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/693072010801.pdf"
-			(at 146.05 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Micro SD Card Socket"
-			(at 146.05 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "SH"
-			(uuid "98594983-e6dc-4b55-bf88-d6eac60dbf03")
-		)
-		(pin "3"
-			(uuid "a98e8870-26ea-4ca7-b21e-7e8fe9142e19")
-		)
-		(pin "1"
-			(uuid "fc232a34-8b3f-4176-803b-a7965fc25e00")
-		)
-		(pin "5"
-			(uuid "9d103bf8-ebf9-4bcb-8801-7971eb238c9e")
-		)
-		(pin "6"
-			(uuid "789a961b-6292-4597-8ff0-17547982c0d6")
-		)
-		(pin "7"
-			(uuid "7045251f-3021-47d5-bb9c-c805bac3b729")
-		)
-		(pin "8"
-			(uuid "049e8f64-a78d-439d-bd40-ebdf4db1aaa5")
-		)
-		(pin "2"
-			(uuid "2cb96294-f65b-4d78-9e85-e37b82111de2")
-		)
-		(pin "4"
-			(uuid "bcd70caa-ef00-4dc4-b5d4-2bf64c80f9a1")
-		)
-		(instances
-			(project "hardware"
-				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96"
-					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -3362,7 +3405,267 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_DPST_x2")
+		(lib_id "power:GNDREF")
+		(at 167.64 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63424d41-e46b-4e43-96a7-4f179f02e2fd")
+		(property "Reference" "#PWR071"
+			(at 167.64 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.64 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+			(at 167.64 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d167c226-b00d-4038-9531-f9a9f2c9e4eb")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Micro_SD_Card_Det1")
+		(at 146.05 130.81 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9836622b-a0a1-4e9f-bd25-2af4174ad919")
+		(property "Reference" "J4"
+			(at 146.685 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Micro_SD_Card_Det1"
+			(at 146.685 111.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf"
+			(at 146.05 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Micro SD Card Socket with one card detection pin"
+			(at 146.05 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "38be679f-dab1-465f-bfe6-a0a66f75ff4c")
+		)
+		(pin "6"
+			(uuid "3845da1c-13ef-4a11-8809-63fe9d7a2fdf")
+		)
+		(pin "2"
+			(uuid "212a69f5-c498-4aee-b4b6-d6493f00fc68")
+		)
+		(pin "7"
+			(uuid "53be5efc-b6f0-4b77-b7e3-2aba9c26f393")
+		)
+		(pin "1"
+			(uuid "a2f89717-c427-47b3-b275-8b37c99d586b")
+		)
+		(pin "3"
+			(uuid "8b626f12-3915-43aa-83b7-55f5308a1a9b")
+		)
+		(pin "5"
+			(uuid "44be234f-ff33-45d2-ba16-b7820a11e75d")
+		)
+		(pin "8"
+			(uuid "fceff541-e6dc-4b19-9393-871da0a4edde")
+		)
+		(pin "SH"
+			(uuid "e524f296-2a2b-4731-880c-9eecea9151b5")
+		)
+		(pin "9"
+			(uuid "541c5399-1f77-4ff7-af62-439334d1455f")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 102.87 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9fd9d8b1-cb9d-4cdd-8bb3-76eb3d667afc")
+		(property "Reference" "#FLG04"
+			(at 102.87 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 102.87 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 102.87 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc540cc7-46d2-4e9f-9a85-a0d113cfd32f")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/43eeeb2a-883a-4738-8b2b-317d62bf6c96"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
 		(at 93.98 62.23 0)
 		(unit 1)
 		(body_style 1)
@@ -3372,7 +3675,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b64d5ef5-b167-46cd-bcd8-597688f8d928")
+		(uuid "c3a3351d-d270-4d64-aa98-813b1391f8a0")
 		(property "Reference" "SW41"
 			(at 93.98 55.88 0)
 			(show_name no)
@@ -3383,7 +3686,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_DPST_x2"
+		(property "Value" "SW_SPST"
 			(at 93.98 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3415,7 +3718,7 @@
 				)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch, separate symbol"
+		(property "Description" "Single Pole Single Throw (SPST) switch"
 			(at 93.98 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -3427,16 +3730,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d18af422-f6e6-4f5a-9102-f90105ee99c3")
-		)
-		(pin "3"
-			(uuid "c48772c6-2668-458c-9460-f785a93fa2a4")
+			(uuid "6a86983e-e83b-4b51-b3a9-aa016a763f7c")
 		)
 		(pin "2"
-			(uuid "0c797a5b-d8f3-4a9b-8bee-71a431a7d7aa")
-		)
-		(pin "4"
-			(uuid "213530a1-9ad2-4a22-954c-18c109c15267")
+			(uuid "75150e07-17f9-4b9b-94be-e05eff9da4b8")
 		)
 		(instances
 			(project "hardware"
@@ -3479,7 +3776,7 @@
 				)
 			)
 		)
-		(property "Footprint" "1079_KEY"
+		(property "Footprint" "footprints:1079_KEY"
 			(at 80.01 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -3715,7 +4012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "01. uF"
+		(property "Value" "0.1 uF"
 			(at 123.19 152.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3797,7 +4094,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "680 uF"
+		(property "Value" "180 uF"
 			(at 106.68 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
