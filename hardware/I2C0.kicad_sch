@@ -2277,7 +2277,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 239.776 84.074 90)
 			(hide yes)
 			(show_name no)
@@ -2679,7 +2679,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 249.936 84.074 90)
 			(hide yes)
 			(show_name no)
@@ -2937,7 +2937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 83.566 76.454 90)
 			(hide yes)
 			(show_name no)
