@@ -2437,7 +2437,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10 K"
+		(property "Value" "10k"
 			(at 200.66 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3065,7 +3065,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 190.5 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3295,7 +3295,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10 K"
+		(property "Value" "10k"
 			(at 68.58 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3377,7 +3377,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 180.34 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3459,7 +3459,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 58.42 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3630,7 +3630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 246.0752 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -3653,6 +3653,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 245.11 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71H104KT/563505"
+			(at 245.11 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "478-KGM21NR71H104KTCT-ND"
 			(at 245.11 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -3868,7 +3890,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 120.3452 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -3891,6 +3913,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 119.38 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71H104KT/563505"
+			(at 119.38 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "478-KGM21NR71H104KTCT-ND"
 			(at 119.38 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -4017,7 +4061,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 48.26 55.8799 0)
 			(show_name no)
 			(do_not_autoplace no)

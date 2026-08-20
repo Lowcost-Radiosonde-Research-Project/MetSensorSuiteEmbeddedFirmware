@@ -3278,7 +3278,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
 			(at 194.0052 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3301,6 +3301,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 193.04 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kemet/A768MS337M1VLAE022/12705376"
+			(at 193.04 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "399-A768MS337M1VLAE022CT-ND"
 			(at 193.04 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -3514,7 +3536,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Card:microSD_HC_Molex_104031-0811"
 			(at 198.12 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -3696,7 +3718,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_DIP_SPSTx01_Slide_9.78x4.72mm_W7.62mm_P2.54mm"
 			(at 93.98 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -3863,7 +3885,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Bourns-SRN8040_8x8.15mm"
 			(at 171.45 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -3887,6 +3909,28 @@
 		)
 		(property "Description" "Inductor"
 			(at 171.45 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/bourns-inc/SRN8040TA-330M/6155132"
+			(at 171.45 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "SRN8040TA-330MCT-ND"
+			(at 171.45 67.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4023,7 +4067,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 120.3452 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -4046,6 +4090,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 119.38 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71H104KT/563505"
+			(at 119.38 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "478-KGM21NR71H104KTCT-ND"
 			(at 119.38 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -4105,7 +4171,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x6.7"
 			(at 103.8352 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -4128,6 +4194,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 102.87 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kemet/A768KE187M1ELAE029/13420143"
+			(at 102.87 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "399-A768KE187M1ELAE029CT-ND"
 			(at 102.87 72.39 0)
 			(hide yes)
 			(show_name no)

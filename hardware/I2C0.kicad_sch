@@ -1339,7 +1339,7 @@
 		(uuid "ad3656e4-7e1b-4796-b9a6-f59413c5b596")
 	)
 	(no_connect
-		(at 81.28 106.68)
+		(at 78.74 106.68)
 		(uuid "e34b8f45-a810-4ec2-b2cd-8f8613603923")
 	)
 	(wire
@@ -1374,16 +1374,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 109.22) (xy 78.74 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09addeeb-741c-4447-a756-4aa2d9210b08")
-	)
-	(wire
-		(pts
 			(xy 200.66 93.98) (xy 200.66 99.06)
 		)
 		(stroke
@@ -1411,6 +1401,16 @@
 			(type default)
 		)
 		(uuid "1c183931-7380-41e7-860f-23dd0951ec0b")
+	)
+	(wire
+		(pts
+			(xy 81.28 109.22) (xy 86.36 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23da2336-521a-4456-a59c-9cf7cb58a932")
 	)
 	(wire
 		(pts
@@ -1794,6 +1794,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 106.68) (xy 81.28 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccf82932-4c06-46f1-ba2f-03c1e33a4da2")
+	)
+	(wire
+		(pts
 			(xy 48.26 96.52) (xy 55.88 96.52)
 		)
 		(stroke
@@ -1801,16 +1811,6 @@
 			(type default)
 		)
 		(uuid "d560567e-b2e2-41a3-83c7-ecabd80d86a7")
-	)
-	(wire
-		(pts
-			(xy 86.36 109.22) (xy 78.74 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5bc685c-ddfd-40a4-867a-6af4618cadf0")
 	)
 	(wire
 		(pts
@@ -2266,7 +2266,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 241.3 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2597,7 +2597,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 160.9852 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -2620,6 +2620,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 160.02 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J106KE47D/5797506"
+			(at 160.02 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "490-12538-1-ND"
 			(at 160.02 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -2668,7 +2690,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7 K"
+		(property "Value" "4.7k"
 			(at 251.46 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3097,7 +3119,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 56.8452 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -3120,6 +3142,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 55.88 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J106KE47D/5797506"
+			(at 55.88 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "490-12538-1-ND"
 			(at 55.88 102.87 0)
 			(hide yes)
 			(show_name no)
