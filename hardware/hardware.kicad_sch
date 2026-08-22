@@ -8393,7 +8393,7 @@
 			)
 		)
 	)
-	(global_label "I2C0_SCL"
+	(global_label "I2C1_SCL"
 		(shape output)
 		(at 87.63 72.39 0)
 		(fields_autoplaced yes)
@@ -8849,7 +8849,7 @@
 			)
 		)
 	)
-	(global_label "I2C0_SDA"
+	(global_label "I2C1_SDA"
 		(shape bidirectional)
 		(at 87.63 74.93 0)
 		(fields_autoplaced yes)

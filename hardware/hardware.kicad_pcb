@@ -113,7 +113,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -1250,8 +1249,8 @@
 		(units
 			(unit
 				(name "A")
-				(pins "5" "6" "20" "21" "18" "19" "4" "1" "8" "2" "23" "22" "7" "10"
-					"12" "13" "24" "9" "15" "16" "17" "14" "11" "3"
+				(pins "5" "6" "20" "21" "18" "19" "4" "1" "8" "2" "23" "22" "7" "24"
+					"13" "12" "10" "9" "15" "16" "17" "14" "11" "3"
 				)
 			)
 		)
@@ -5872,7 +5871,7 @@
 			(size 1.125 1.75)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.222222)
-			(net "I2C0_SCL")
+			(net "I2C1_SCL")
 			(pintype "passive")
 			(uuid "68ed0109-5ba2-495d-ae0a-ecae29a4ee67")
 		)
@@ -9848,7 +9847,7 @@
 			(at 1.075 -0.625)
 			(size 0.95 0.55)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "I2C0_SDA")
+			(net "I2C1_SDA")
 			(pinfunction "SDI/SDA_7")
 			(pintype "bidirectional")
 			(uuid "bbe9d4ed-92ba-4e98-a236-4d96ee5dfde5")
@@ -9857,7 +9856,7 @@
 			(at 1.075 -1.875)
 			(size 0.95 0.55)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "I2C0_SCL")
+			(net "I2C1_SCL")
 			(pinfunction "SCLK_8")
 			(pintype "input")
 			(uuid "a3a9ea54-0e64-4a16-9b66-8a7d310c464b")
@@ -12733,7 +12732,7 @@
 			(unit
 				(name "A")
 				(pins "30" "37" "1" "2" "4" "5" "6" "7" "9" "10" "11" "12" "14" "15"
-					"16" "17" "19" "20" "39" "40" "3" "23" "28" "18" "13" "38" "8" "36"
+					"16" "17" "19" "20" "39" "40" "23" "3" "8" "38" "13" "28" "18" "36"
 					"21" "22" "24" "25" "26" "27" "29" "35" "31" "32" "34" "33"
 				)
 			)
@@ -14710,7 +14709,7 @@
 			(size 3.2 1.6)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.5)
-			(net "I2C0_SCL")
+			(net "I2C1_SCL")
 			(pinfunction "GPIO26_ADC0_31")
 			(pintype "bidirectional")
 			(uuid "b2998dfe-5c59-4c6b-beb5-e6b0e8e1aa86")
@@ -14720,7 +14719,7 @@
 			(size 3.2 1.6)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.5)
-			(net "I2C0_SDA")
+			(net "I2C1_SDA")
 			(pinfunction "GPIO27_ADC1_32")
 			(pintype "bidirectional")
 			(uuid "1d7b9a03-76db-41c8-a01b-50cd5169f1da")
@@ -22197,7 +22196,7 @@
 			(size 1.125 1.75)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.222222)
-			(net "I2C0_SDA")
+			(net "I2C1_SDA")
 			(pintype "passive")
 			(uuid "3c9be29a-8dbf-4939-ac2d-be9053d2bc70")
 		)
