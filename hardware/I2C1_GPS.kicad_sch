@@ -2448,7 +2448,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 197.104 69.596 90)
 			(hide yes)
 			(show_name no)
@@ -2471,6 +2471,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 198.12 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 198.12 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
 			(at 198.12 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -2846,6 +2868,28 @@
 				(justify bottom)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/pulse-electronics/W3011/3025804"
+			(at 119.38 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "553-2582-1-ND"
+			(at 119.38 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "c21fe23e-39da-4ba2-a4ea-d71d24e4115e")
 		)
@@ -3009,6 +3053,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/te-connectivity-measurement-specialties/MS561101BA03-50/5277445"
+			(at 215.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "223-1622-1-ND"
+			(at 215.9 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "fd3edc31-0949-4f69-933b-f253fe46bf56")
 		)
@@ -3076,7 +3142,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 186.944 69.596 90)
 			(hide yes)
 			(show_name no)
@@ -3099,6 +3165,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 187.96 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 187.96 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 187.96 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -3181,6 +3269,28 @@
 			)
 		)
 		(property "Description" "GNSS Module NEO M8, VCC 2.7V to 3.6V"
+			(at 87.63 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/u-blox/NEO-M9N-00B/12149174?s=N4IgTCBcDaIHYFMD2BaAtgTjiAugXyA"
+			(at 87.63 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "672-NEO-M9N-00BCT-ND"
 			(at 87.63 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -3306,7 +3416,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 67.056 54.864 90)
 			(hide yes)
 			(show_name no)
@@ -3329,6 +3439,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 66.04 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 66.04 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
 			(at 66.04 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3388,7 +3520,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 176.784 69.596 90)
 			(hide yes)
 			(show_name no)
@@ -3411,6 +3543,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 177.8 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 177.8 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 177.8 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -3470,7 +3624,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 56.896 54.864 90)
 			(hide yes)
 			(show_name no)
@@ -3493,6 +3647,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 55.88 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 55.88 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 55.88 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4072,7 +4248,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 46.736 54.864 90)
 			(hide yes)
 			(show_name no)
@@ -4095,6 +4271,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 45.72 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 45.72 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 45.72 54.61 0)
 			(hide yes)
 			(show_name no)

@@ -6107,6 +6107,16 @@
 	)
 	(wire
 		(pts
+			(xy 396.24 114.3) (xy 406.4 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11e1a3ba-9420-4777-a67d-2792b7dcabcc")
+	)
+	(wire
+		(pts
 			(xy 336.55 97.79) (xy 331.47 97.79)
 		)
 		(stroke
@@ -6497,7 +6507,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 116.84) (xy 406.4 116.84)
+			(xy 372.11 116.84) (xy 388.62 116.84)
 		)
 		(stroke
 			(width 0)
@@ -6874,6 +6884,16 @@
 			(type default)
 		)
 		(uuid "5d9c9f30-fe44-4c7d-a982-de1a8b20387f")
+	)
+	(wire
+		(pts
+			(xy 396.24 111.76) (xy 406.4 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d9fed22-3355-4bc7-8f71-ca249ddfb3bb")
 	)
 	(wire
 		(pts
@@ -7307,7 +7327,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 114.3) (xy 406.4 114.3)
+			(xy 372.11 114.3) (xy 388.62 114.3)
 		)
 		(stroke
 			(width 0)
@@ -7967,7 +7987,7 @@
 	)
 	(wire
 		(pts
-			(xy 372.11 111.76) (xy 406.4 111.76)
+			(xy 372.11 111.76) (xy 388.62 111.76)
 		)
 		(stroke
 			(width 0)
@@ -8004,6 +8024,16 @@
 			(type default)
 		)
 		(uuid "eb6f41d4-fd79-4446-9db3-b20f73d9319b")
+	)
+	(wire
+		(pts
+			(xy 396.24 116.84) (xy 406.4 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec21b8f4-ccd8-4bd4-9dff-aebf6fc90433")
 	)
 	(wire
 		(pts
@@ -10643,6 +10673,17 @@
 				)
 			)
 		)
+		(property "Digikey Part Number" "JSTXH"
+			(at 157.48 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "711b5a8f-2fc0-4ab1-acf2-81a6e7f6fbab")
 		)
@@ -10792,7 +10833,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 328.676 86.614 90)
 			(hide yes)
 			(show_name no)
@@ -10815,6 +10856,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 327.66 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1009FP500/2607826"
+			(at 327.66 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0-CFCT-ND"
 			(at 327.66 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -11094,6 +11157,109 @@
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 392.43 111.76 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "29ac2e0e-ab8b-4be4-b5f4-fcb73794ea6e")
+		(property "Reference" "R3"
+			(at 397.51 110.998 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 403.352 110.744 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 392.684 110.744 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 392.43 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 392.43 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 392.43 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
+			(at 392.43 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "82178850-8853-474c-bc2f-88baef8ab093")
+		)
+		(pin "1"
+			(uuid "29ab4a6c-b700-434e-b329-c9d7a7fe9dd5")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -11726,7 +11892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 323.596 86.614 90)
 			(hide yes)
 			(show_name no)
@@ -11749,6 +11915,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 322.58 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4709FP500/2607856"
+			(at 322.58 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-47.0-CFCT-ND"
 			(at 322.58 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -12469,6 +12657,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151051BS04000/4490009?s=N4IgTCBcDaIOwGYwFoCsAGAjK5A5AIiALoC%2BQA"
+			(at 165.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "732-5015-ND"
+			(at 165.1 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "da238110-7389-49fe-bad4-f882f1bd9463")
 		)
@@ -12671,7 +12881,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+		(property "Footprint" "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm"
 			(at 121.92 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -12694,6 +12904,28 @@
 			)
 		)
 		(property "Description" "Two pin crystal"
+			(at 121.92 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/kyocera-avx/CX2016FB26000F0FZZH1/28376790"
+			(at 121.92 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "478-CX2016FB26000F0FZZH1CT-ND"
 			(at 121.92 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -13065,6 +13297,17 @@
 				)
 			)
 		)
+		(property "Digikey Part Number" "JSTXH"
+			(at 157.48 114.3 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "31514065-5547-4201-8cc5-3f5528cbdb8b")
 		)
@@ -13423,7 +13666,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 253.746 175.514 90)
 			(hide yes)
 			(show_name no)
@@ -13446,6 +13689,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 252.73 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C5602FP500/2800963?s=N4IgjCBcoMxaBjKAzAhgGwM4FMA0IB7KAbXDBggF18AHAFyhAGU6AnASwDsBzEAX3xgAbPBBJIaLHkIkQMAJwAmACwj8CmIvkhqIeoxYce-fIoAMADgCso8ZJz4ikUlaEACANYB5ABYBbTB1aBkgQAFVOdjovZABZbFRMAFdWbBMQAFpFWyg2JOknFx0BTO1oMVzWfMdZKhKMiHK7DAcZZxAAdmVtSj4SkXL2ABNGBrMIYMYQfDoATxo00MSkPqA"
+			(at 252.73 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "749-1667-1-ND"
 			(at 252.73 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -13502,7 +13767,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 157.226 31.496 90)
 			(hide yes)
 			(show_name no)
@@ -13526,6 +13791,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 157.48 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C3300FP500/2607846"
+			(at 157.48 30.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT06030C3300FP500"
+			(at 157.48 30.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14010,6 +14297,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/151051RS11000/4490012"
+			(at 165.1 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "732-5016-ND"
+			(at 165.1 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "861bd2c7-4bdf-4964-9560-17129f7cac52")
 		)
@@ -14481,6 +14790,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/texas-instruments/CC1190RGVR/2353334"
+			(at 339.09 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "296-36922-1-ND"
+			(at 339.09 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "8e7e8ae2-90cb-44a1-8fc2-e895cc3cf865")
 		)
@@ -14536,6 +14867,109 @@
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 392.43 116.84 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "94081a1e-f64a-4f36-827c-2627d274c41c")
+		(property "Reference" "R5"
+			(at 397.51 115.824 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 403.098 115.824 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 392.684 115.824 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 392.43 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 392.43 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 392.43 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
+			(at 392.43 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c208fe54-ed7e-4c10-9568-cd14460c2f57")
+		)
+		(pin "1"
+			(uuid "949699a1-05d6-4ed7-ba8d-d356c12a25c1")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -14651,7 +15085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 157.226 21.336 90)
 			(hide yes)
 			(show_name no)
@@ -14675,6 +15109,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 157.48 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C3300FP500/2607846"
+			(at 157.48 20.32 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT06030C3300FP500"
+			(at 157.48 20.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14901,7 +15357,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BMIS-202-C"
+		(property "Value" "BMI-S-205-C"
 			(at 307.34 167.0049 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14912,7 +15368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "RF_Shielding:Laird_Technologies_BMI-S-202-F_16.50x16.50mm"
+		(property "Footprint" "RF_Shielding:Laird_Technologies_BMI-S-203-F_26.21x26.21mm"
 			(at 288.29 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -14935,6 +15391,28 @@
 			)
 		)
 		(property "Description" "Snap fit"
+			(at 288.29 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/laird-technologies-emi/BMI-S-202-C/2175915"
+			(at 288.29 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "903-1014-ND"
 			(at 288.29 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -15169,7 +15647,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 319.024 104.394 90)
 			(hide yes)
 			(show_name no)
@@ -15193,6 +15671,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 318.77 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C3301FP500/2607847"
+			(at 318.77 105.41 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-3.30K-CFCT-ND"
+			(at 318.77 105.41 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15439,6 +15939,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/raspberry-pi/SC1631/24627136"
+			(at 59.69 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "2648-SC1631CT-ND"
+			(at 59.69 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "b26a523d-3a18-4b84-ad25-693d86243994")
 		)
@@ -15625,6 +16147,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 139.7 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/texas-instruments/CC1101RGPR/3947323"
+			(at 139.7 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "296-35718-1-ND"
 			(at 139.7 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -17347,6 +17891,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/laird-signal-integrity-products/HZ0805D102R-10/806636"
+			(at 149.86 204.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "240-2397-1-ND"
+			(at 149.86 204.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b36c623b-ca14-483c-ba49-1c0d8eca10be")
 		)
@@ -17907,6 +18473,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 392.43 114.3 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e9607d41-9e80-4cff-a22c-45c2997ca6b0")
+		(property "Reference" "R4"
+			(at 397.256 113.284 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10K"
+			(at 403.098 113.284 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 392.684 113.284 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 392.43 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 392.43 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 392.43 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
+			(at 392.43 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2a070da4-6401-4e26-9ed8-de63cc65e7c7")
+		)
+		(pin "1"
+			(uuid "52db2336-b714-49f3-ae4e-2f7b3785ee0d")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 232.41 175.26 0)
 		(unit 1)
@@ -18247,6 +18916,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 300.99 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/qualcomm-rf-front-end-rffe-filters/B39921B3588U410/644258?s=N4IgTCBcDaIEIGYCcSwEZEFYAc2CqALGgAwgC6AvkA"
+			(at 300.99 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "495-1674-1-ND"
 			(at 300.99 113.03 0)
 			(hide yes)
 			(show_name no)

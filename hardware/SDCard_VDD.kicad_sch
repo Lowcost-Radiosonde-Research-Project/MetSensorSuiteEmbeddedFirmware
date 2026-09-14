@@ -2748,6 +2748,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/umw/LM2596S-3-3/16705894"
+			(at 133.35 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "4518-LM2596S-3.3CT-ND"
+			(at 133.35 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "9c0827a8-045f-4cc6-bfa4-8a3ba956e085")
 		)
@@ -3196,7 +3218,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_A-405_P7.62mm_Horizontal"
 			(at 150.495 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -3220,6 +3242,28 @@
 		)
 		(property "Description" "20V 3A Schottky Barrier Rectifier Diode, DO-201AD"
 			(at 154.94 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/diotec-semiconductor/1N5820/22191764"
+			(at 154.94 74.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "4878-1N5820CT-ND"
+			(at 154.94 74.93 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3569,6 +3613,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/molex/1040310811/2370379"
+			(at 146.05 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "WM6357CT-ND"
+			(at 146.05 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "38be679f-dab1-465f-bfe6-a0a66f75ff4c")
 		)
@@ -3823,6 +3889,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 80.01 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/keystone-electronics/1079/5118843"
+			(at 80.01 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "36-1079-ND"
 			(at 80.01 62.23 0)
 			(hide yes)
 			(show_name no)

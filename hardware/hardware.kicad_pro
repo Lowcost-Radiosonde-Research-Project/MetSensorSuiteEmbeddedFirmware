@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.8,
-          "width": 1.15
+          "height": 1.0,
+          "width": 3.3
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -591,6 +591,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -644,13 +645,13 @@
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -662,7 +663,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -775,7 +776,7 @@
         "uuid": "63c7c074-dbc9-4433-b26d-8a099c78afdf"
       }
     ],
-    "used_designators": "SW1",
+    "used_designators": "R6,R9,SW1",
     "variants": []
   },
   "sheets": [

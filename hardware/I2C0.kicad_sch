@@ -2149,6 +2149,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/littelfuse-ibu/PPG102JA/10500302?s=N4IgTCBcDaIA5wOYEYAMYBWBDEBdAvkA"
+			(at 59.69 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "5666-PPG102JA-ND"
+			(at 59.69 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ccb70d76-8af1-4a04-98ce-1c87bfd3123f")
 		)
@@ -2277,7 +2299,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 239.776 84.074 90)
 			(hide yes)
 			(show_name no)
@@ -2300,6 +2322,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 238.76 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 238.76 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 238.76 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2459,6 +2503,28 @@
 			)
 		)
 		(property "Description" "10 kOhms ±0.1% 0.4W Through Hole Resistor Axial Metal Film"
+			(at 73.66 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay-beyschlag-draloric-bc-components/MBB0207VE1002BC100/7350421?s=N4IgTCBcDaIEYGMAsBWAjChAXAtAOwBMQBdAXyA"
+			(at 73.66 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "BC4515CT-ND"
 			(at 73.66 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -2701,7 +2767,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 249.936 84.074 90)
 			(hide yes)
 			(show_name no)
@@ -2724,6 +2790,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 248.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C4701FP500/2607853"
+			(at 248.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
 			(at 248.92 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2893,6 +2981,28 @@
 				)
 			)
 		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/bosch-sensortec/BME280/6136306"
+			(at 182.88 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "828-1063-1-ND"
+			(at 182.88 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "422fd2af-cd99-420f-b7a9-7128b0a49a2f")
 		)
@@ -2959,7 +3069,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 83.566 76.454 90)
 			(hide yes)
 			(show_name no)
@@ -2982,6 +3092,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 82.55 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/vishay/MCT06030C1002FP500/1850440"
+			(at 82.55 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
 			(at 82.55 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3559,6 +3691,28 @@
 		)
 		(property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 860-SPS, 16-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
 			(at 76.2 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGSR/2231567"
+			(at 76.2 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "296-38849-1-ND"
+			(at 76.2 96.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
