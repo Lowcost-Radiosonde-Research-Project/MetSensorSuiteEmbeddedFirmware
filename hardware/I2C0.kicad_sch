@@ -759,55 +759,38 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Sensor:BME280"
+		(symbol "SHT41-AD1B-R3:SHT41-AD1B-R3"
+			(pin_names
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -8.89 11.43 0)
+				(at -10.16 8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Value" "BME280"
-				(at 7.62 11.43 0)
+			(property "Value" "SHT41-AD1B-R3"
+				(at -10.16 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-				(at 38.1 -11.43 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
+			(property "Footprint" "SHT41-AD1B-R3:SHT4X"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -816,9 +799,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(property "ki_keywords" "Bosch pressure humidity temperature environment environmental measurement digital"
+			(property "Datasheet" "https://snapeda.s3.amazonaws.com/media/sensirion01052023/Datasheet_SHT4x.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -827,9 +811,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(property "ki_fp_filters" "*LGA*2.5x2.5mm*P0.65mm*Clockwise*"
+			(property "Description" "Digital Relative Humidity Temperature Sensor, ±1.8 / max 2.5 %RH, ±0.2 °C, Ultra-Low-Power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -838,12 +823,61 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 				)
 			)
-			(symbol "BME280_0_1"
+			(property "DATASHEET_URL" "https://snapeda.s3.amazonaws.com/media/sensirion01052023/Datasheet_SHT4x.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "MANUFACTURER" "Sensirion AG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "MPN" "SHT41-AD1B-R3"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(property "SOURCE_URL" "https://www.snapeda.com/parts/SHT41-AD1B-R3/Sensirion/view-part/"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+				)
+			)
+			(symbol "SHT41-AD1B-R3_0_0"
 				(rectangle
-					(start -10.16 10.16)
-					(end 10.16 -10.16)
+					(start -10.16 -7.62)
+					(end 10.16 7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -852,148 +886,74 @@
 						(type background)
 					)
 				)
-			)
-			(symbol "BME280_1_1"
-				(pin power_in line
-					(at -2.54 -15.24 90)
+				(pin bidirectional line
+					(at -15.24 -2.54 0)
 					(length 5.08)
-					(name "GND"
+					(name "SDA"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin input line
-					(at 15.24 -7.62 180)
+					(at -15.24 2.54 0)
 					(length 5.08)
-					(name "CSB"
+					(name "SCL"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
-				(pin bidirectional line
-					(at 15.24 -2.54 180)
+				(pin power_in line
+					(at 15.24 5.08 180)
 					(length 5.08)
-					(name "SDI"
+					(name "VDD"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
-				(pin input line
-					(at 15.24 2.54 180)
+				(pin power_in line
+					(at 15.24 -5.08 180)
 					(length 5.08)
-					(name "SCK"
+					(name "VSS"
 						(effects
 							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 15.24 7.62 180)
-					(length 5.08)
-					(name "SDO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 15.24 270)
-					(length 5.08)
-					(name "VDDIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 -15.24 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 15.24 270)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -1293,10 +1253,10 @@
 		)
 	)
 	(junction
-		(at 163.83 96.52)
+		(at 187.96 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "30f6ed67-e7de-4666-bfc8-fe2690ead1f2")
+		(uuid "277133a5-dc2d-4e23-8b7c-c694a4952d78")
 	)
 	(junction
 		(at 86.36 135.89)
@@ -1311,28 +1271,10 @@
 		(uuid "70ce75ed-cf16-4aec-a3b4-e9b867ec0488")
 	)
 	(junction
-		(at 160.02 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3848555-91e1-42e4-a987-01654b1d2a9b")
-	)
-	(junction
 		(at 55.88 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b605d71c-bf00-4fda-965a-da8cfa52957c")
-	)
-	(junction
-		(at 160.02 106.68)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b61561fa-5056-45eb-bb90-7d7284741623")
-	)
-	(junction
-		(at 200.66 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b696874e-1cde-4154-bffb-b60ab65925c3")
 	)
 	(no_connect
 		(at 73.66 106.68)
@@ -1351,46 +1293,6 @@
 			(type default)
 		)
 		(uuid "02fddf31-287d-4228-89bb-3eddbc1dd953")
-	)
-	(wire
-		(pts
-			(xy 167.64 93.98) (xy 163.83 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0300807b-bd21-4339-be5e-9c1d026efbf1")
-	)
-	(wire
-		(pts
-			(xy 163.83 96.52) (xy 163.83 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0844dd74-2009-4916-b158-496897c7d79e")
-	)
-	(wire
-		(pts
-			(xy 200.66 93.98) (xy 200.66 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17e990ee-720b-461e-9a73-32590661fd93")
-	)
-	(wire
-		(pts
-			(xy 200.66 99.06) (xy 198.12 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a84ccc4-1891-4148-a773-f1335071625f")
 	)
 	(wire
 		(pts
@@ -1414,16 +1316,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 96.52) (xy 160.02 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26c69613-aa8b-4944-827e-f1fc2b1b5975")
-	)
-	(wire
-		(pts
 			(xy 233.68 88.9) (xy 238.76 88.9)
 		)
 		(stroke
@@ -1431,16 +1323,6 @@
 			(type default)
 		)
 		(uuid "274a756e-d879-48c3-860c-5704413e3745")
-	)
-	(wire
-		(pts
-			(xy 200.66 99.06) (xy 200.66 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30930c29-57c7-418e-97c9-3a68fd2fba2d")
 	)
 	(wire
 		(pts
@@ -1484,16 +1366,6 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 106.68) (xy 160.02 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f4a0ecc-b942-41e5-b296-a9f02b8011ff")
-	)
-	(wire
-		(pts
 			(xy 86.36 138.43) (xy 86.36 135.89)
 		)
 		(stroke
@@ -1514,13 +1386,13 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 81.28) (xy 175.26 71.12)
+			(xy 187.96 111.76) (xy 187.96 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5e709d7e-5ceb-43d4-909b-d374feee98c4")
+		(uuid "612cf48a-2392-40f7-8e9c-70bee5af5b76")
 	)
 	(wire
 		(pts
@@ -1554,6 +1426,16 @@
 	)
 	(wire
 		(pts
+			(xy 212.09 111.76) (xy 212.09 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f50642a-3b9a-4d3d-840b-4cc05386b608")
+	)
+	(wire
+		(pts
 			(xy 185.42 71.12) (xy 185.42 81.28)
 		)
 		(stroke
@@ -1571,6 +1453,16 @@
 			(type default)
 		)
 		(uuid "711bf786-aa08-414c-8bd9-9b97b38b18ea")
+	)
+	(wire
+		(pts
+			(xy 177.8 111.76) (xy 177.8 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73e53067-2ab8-4766-a44c-6992b39a7044")
 	)
 	(wire
 		(pts
@@ -1614,13 +1506,13 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 93.98) (xy 163.83 96.52)
+			(xy 187.96 114.3) (xy 212.09 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9dbf10d7-b8c5-4f54-864e-5648fd71c5c5")
+		(uuid "8e7415c0-8147-4581-9f8b-29c26e92e94a")
 	)
 	(wire
 		(pts
@@ -1644,16 +1536,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 71.12) (xy 152.4 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a53fc279-36a3-4358-bf2c-f2581d6912c3")
-	)
-	(wire
-		(pts
 			(xy 88.9 96.52) (xy 88.9 97.79)
 		)
 		(stroke
@@ -1671,26 +1553,6 @@
 			(type default)
 		)
 		(uuid "acd79f17-e0ec-428e-943b-ec029eef00c6")
-	)
-	(wire
-		(pts
-			(xy 160.02 87.63) (xy 160.02 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afba2e0d-f088-4b95-8d11-feccede2816e")
-	)
-	(wire
-		(pts
-			(xy 160.02 96.52) (xy 160.02 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afe54fc3-d23e-467f-8b4c-cda222781dd8")
 	)
 	(wire
 		(pts
@@ -1734,16 +1596,6 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 71.12) (xy 152.4 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be339749-682e-479b-8708-104ce7b0dfec")
-	)
-	(wire
-		(pts
 			(xy 76.2 106.68) (xy 76.2 135.89)
 		)
 		(stroke
@@ -1761,16 +1613,6 @@
 			(type default)
 		)
 		(uuid "c163ca4c-9c87-427e-ab19-56da2196245e")
-	)
-	(wire
-		(pts
-			(xy 190.5 69.85) (xy 190.5 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c21b8f22-1bac-4243-adfe-4e7afd663d44")
 	)
 	(wire
 		(pts
@@ -1814,16 +1656,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 99.06) (xy 167.64 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d83dd9bf-e98f-446a-af12-3647d015411b")
-	)
-	(wire
-		(pts
 			(xy 180.34 71.12) (xy 180.34 81.28)
 		)
 		(stroke
@@ -1851,16 +1683,6 @@
 			(type default)
 		)
 		(uuid "e269f12a-32a6-417e-904f-4f9050a9644e")
-	)
-	(wire
-		(pts
-			(xy 198.12 93.98) (xy 200.66 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ca311e-664d-4a5b-8f35-5ad2140fa759")
 	)
 	(global_label "I2C0_SDA"
 		(shape bidirectional)
@@ -2007,84 +1829,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VDD")
-		(at 160.02 87.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0ef30ec7-3d2b-4377-8475-0fa6ce03bbad")
-		(property "Reference" "#PWR049"
-			(at 160.02 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDD"
-			(at 160.02 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 160.02 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1f5f3428-c0c5-489e-a7b9-2406817b7347")
-		)
-		(instances
-			(project "hardware"
-				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "#PWR049")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PPG102JA:PPG102JA")
 		(at 59.69 139.7 0)
 		(unit 1)
@@ -2161,6 +1905,28 @@
 			)
 		)
 		(property "Digikey Part Number" "5666-PPG102JA-ND"
+			(at 59.69 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 59.69 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 59.69 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -2266,6 +2032,132 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 187.96 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40e7dd3c-13a1-41bc-89ee-b1001c4eee46")
+		(property "Reference" "C9"
+			(at 191.77 116.8399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10 uF"
+			(at 191.77 119.3799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 188.9252 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J106KE47D/5797506"
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Digikey Part Number" "490-12538-1-ND"
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 187.96 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b1c5260b-0ef2-49f5-a722-3f4299b7af50")
+		)
+		(pin "1"
+			(uuid "5c37ba71-8c3f-4e5e-9eec-1885634a1c2b")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 238.76 83.82 0)
 		(unit 1)
@@ -2344,6 +2236,28 @@
 			)
 		)
 		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
+			(at 238.76 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 238.76 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 238.76 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2535,6 +2449,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 73.66 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 73.66 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "259ee711-0183-4abc-92d2-5cd36938f5ce")
 		)
@@ -2630,110 +2566,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 160.02 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6c5e7ef0-6e26-4218-b4d8-47cecaf02246")
-		(property "Reference" "C02"
-			(at 163.83 101.5999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10 uF"
-			(at 163.83 104.1399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 160.9852 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 160.02 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM188R60J106KE47D/5797506"
-			(at 160.02 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey Part Number" "490-12538-1-ND"
-			(at 160.02 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "a9823fb3-afd1-4b36-b329-b7fef8bd25f2")
-		)
-		(pin "1"
-			(uuid "5499aebe-d138-40d4-b07e-64e9e6d4de50")
-		)
-		(instances
-			(project "hardware"
-				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "C02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 248.92 83.82 0)
 		(unit 1)
@@ -2812,6 +2644,28 @@
 			)
 		)
 		(property "Digikey Part Number" "MCT0603-4.70K-CFCT-ND"
+			(at 248.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 248.92 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 248.92 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -2917,126 +2771,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor:BME280")
-		(at 182.88 96.52 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "72e14f62-fe57-4499-a163-7d3274f2cf23")
-		(property "Reference" "U5"
-			(at 182.88 109.22 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BME280"
-			(at 182.88 111.76 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-			(at 194.31 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-			(at 187.96 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
-			(at 182.88 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey Link" "https://www.digikey.com/en/products/detail/bosch-sensortec/BME280/6136306"
-			(at 182.88 96.52 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digikey Part Number" "828-1063-1-ND"
-			(at 182.88 96.52 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "422fd2af-cd99-420f-b7a9-7128b0a49a2f")
-		)
-		(pin "6"
-			(uuid "e6156123-97a0-43f9-879e-de3585943bdb")
-		)
-		(pin "1"
-			(uuid "ace6712a-74cc-46a3-bec6-5e894f212056")
-		)
-		(pin "2"
-			(uuid "bd82b943-6914-4410-abc6-e1207132099b")
-		)
-		(pin "3"
-			(uuid "7d2cc345-d11f-45bb-aab7-b0754037ab6f")
-		)
-		(pin "5"
-			(uuid "572b4d21-746b-4e0b-9475-02e9f81f0a53")
-		)
-		(pin "8"
-			(uuid "121efe90-0ab2-4ef1-aa48-67435b1d1d03")
-		)
-		(pin "7"
-			(uuid "32d83272-ef69-4752-82fe-7936a92380dd")
-		)
-		(instances
-			(project "hardware"
-				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 82.55 76.2 0)
 		(unit 1)
@@ -3114,6 +2848,28 @@
 			)
 		)
 		(property "Digikey Part Number" "MCT0603-10.0K-CFCT-ND"
+			(at 82.55 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 82.55 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 82.55 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3229,7 +2985,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c2b2050-932c-4639-89c6-c19e159549ce")
-		(property "Reference" "C01"
+		(property "Reference" "C201"
 			(at 59.69 101.5999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3306,6 +3062,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 55.88 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 55.88 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8cddde96-cf23-4e9b-b94f-6d36cfb89ab9")
 		)
@@ -3315,7 +3093,7 @@
 		(instances
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "C01")
+					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -3401,7 +3179,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 160.02 106.68 0)
+		(at 187.96 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3410,9 +3188,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "874c85b1-872b-425a-a23c-244e9184a55f")
-		(property "Reference" "#PWR048"
-			(at 160.02 113.03 0)
+		(uuid "824e39f1-b260-4609-a728-50ab3eed988a")
+		(property "Reference" "#PWR049"
+			(at 187.96 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3423,7 +3201,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 162.56 107.9499 0)
+			(at 190.5 123.1899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3434,7 +3212,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 106.68 0)
+			(at 187.96 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3445,7 +3223,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 106.68 0)
+			(at 187.96 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3456,7 +3234,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 160.02 106.68 0)
+			(at 187.96 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3467,12 +3245,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8ee98a3-eb26-421b-8fa3-06509a3dd596")
+			(uuid "422c68da-93f8-46ef-b363-365d4fcc69e3")
 		)
 		(instances
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "#PWR048")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -3722,6 +3500,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 76.2 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 76.2 96.52 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "23ced35c-a9ba-4281-911f-87ef94d5bf77")
 		)
@@ -3762,8 +3562,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VDD")
-		(at 190.5 69.85 0)
+		(lib_id "SHT41-AD1B-R3:SHT41-AD1B-R3")
+		(at 182.88 96.52 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3772,9 +3572,115 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9728222b-d7fd-4e64-8adc-c6ded2447425")
-		(property "Reference" "#PWR050"
-			(at 190.5 73.66 0)
+		(uuid "9a590871-c03e-404b-b0f2-1a8049d4407c")
+		(property "Reference" "U9"
+			(at 191.77 95.2499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SHT41-AD1B-R3"
+			(at 191.77 97.7899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SHT41_AD1B_R3:SHT4X"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Datasheet" "https://snapeda.s3.amazonaws.com/media/sensirion01052023/Datasheet_SHT4x.pdf"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Description" "Digital Relative Humidity Temperature Sensor, ±1.8 / max 2.5 %RH, ±0.2 °C, Ultra-Low-Power"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "DATASHEET_URL" "https://snapeda.s3.amazonaws.com/media/sensirion01052023/Datasheet_SHT4x.pdf"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "Sensirion AG"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MPN" "SHT41-AD1B-R3"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "SOURCE_URL" "https://www.snapeda.com/parts/SHT41-AD1B-R3/Sensirion/view-part/"
+			(at 182.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 182.88 96.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3784,40 +3690,8 @@
 				)
 			)
 		)
-		(property "Value" "VDD"
-			(at 190.5 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 190.5 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 190.5 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 190.5 69.85 0)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 182.88 96.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3828,12 +3702,99 @@
 			)
 		)
 		(pin "1"
-			(uuid "623b18f7-ef89-4697-a54b-2720f2866b08")
+			(uuid "0f9e78d1-bcf5-4199-9213-3f8e1227be1d")
+		)
+		(pin "2"
+			(uuid "0b238f52-24b3-4aab-a82e-8be8279e9821")
+		)
+		(pin "4"
+			(uuid "00c846e7-0ea7-49f8-bbe3-21bb0f9d5448")
+		)
+		(pin "3"
+			(uuid "f8e0aded-3210-4968-8610-3f00f8a93507")
 		)
 		(instances
 			(project "hardware"
 				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
-					(reference "#PWR050")
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDD")
+		(at 212.09 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ae9b10ad-caf7-4a02-a1ee-a6a500ec4d54")
+		(property "Reference" "#PWR048"
+			(at 212.09 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VDD"
+			(at 212.09 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 212.09 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
+			(at 212.09 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4415e2ec-af30-4491-a921-86ddd7fb8b62")
+		)
+		(instances
+			(project "hardware"
+				(path "/63c7c074-dbc9-4433-b26d-8a099c78afdf/b1a0d313-6453-49e4-a1c8-9c912bdab17e"
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -3919,7 +3880,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 200.66 106.68 0)
+		(at 177.8 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3930,7 +3891,7 @@
 		(fields_autoplaced yes)
 		(uuid "e6643828-eedc-424a-9c1c-e26e5d406ce9")
 		(property "Reference" "#PWR046"
-			(at 200.66 113.03 0)
+			(at 177.8 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3941,7 +3902,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 203.2 107.9499 0)
+			(at 180.34 115.5699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3952,7 +3913,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 200.66 106.68 0)
+			(at 177.8 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3963,7 +3924,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 200.66 106.68 0)
+			(at 177.8 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3974,7 +3935,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 200.66 106.68 0)
+			(at 177.8 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
